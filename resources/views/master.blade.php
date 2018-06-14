@@ -5,100 +5,96 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Master</title>
+    <title>@yield('title')</title>
     <meta content="{{csrf_token()}}" name="csrf-token">
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <link href="{{asset('css/layout.css')}}" rel="stylesheet">
+    <link href="{{asset('css/user-admin.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <script src="{{asset('js/app.js')}}"> </script>
 </head>
 <body>
-
-<header>
-    <div id="header-md" class="container-fluid">
-        <div class="row">
-            <div class="col-md-3 col-lg-3">
-                <h1 id="logo-header" class="text-center"><a href="#"><img src="https://thucpham.com/wp-content/themes/shop/images/thucpham-logo.png?x89043"></a></h1>
-            </div>
-            <div class="col-md-7 col-lg-7">
-                <div class="col-md-11">
-                    <form class="form-group text-input-search p-2" action="/action_page.php">
-                        <input type="text" class="border-left form-control float-left mb-2 ml-1" placeholder="Nhập sản phẩm cần tìm...">
-                        <button type="submit" class="btn btn-success mb-2"><i class="fas fa-search-plus p-1"></i>Search</button>
-                    </form>
-                </div>
-            </div>
-            <div class="col-md-2 col-lg-2">
-                <div class="car-menu">
-                    <a href="#" class="text-dark"><i class="fas fa-cart-plus"></i>Giỏ hàng</a>
-                </div>
-            </div>
-        </div>
-        <nav class="text-nav-menu nav nav-pills nav-justified text-uppercase text">
-            <a class="nav-item nav-link text-dark " href="#">Giống chó</a>
-            <a class="nav-item nav-link text-dark" href="#">Giống mèo</a>
-            <a class="nav-item nav-link text-dark" href="#">Giống cá</a>
-            <a class="nav-item nav-link text-dark" href="#">Giống chim</a>
-            <a class="nav-item nav-link text-dark" href="#">đang bán</a>
-            <a class="nav-item nav-link text-dark" href="#">ảnh đẹp</a>
-            <a class="nav-item nav-link text-dark" href="#">hỏi đáp</a>
-        </nav>
-    </div>
-
-    <div id="header-sm" class="container-fluid">
-        <div class="row">
-            <div class="col-4 col-sm-4">
-                <div class="a navbar-light">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="col-md-12 collapse" id="navbarNav">
-                        <ul class="nav">
-                            <li class="nav-item"><a class="nav-item" href="#">Home</a></li>
-                            <li class="nav-item"><a class="nav-item" href="#">Home</a></li>
-                            <li class="nav-item"><a class="nav-item" href="#">Home</a></li>
-                            <li class="nav-item"><a class="nav-item" href="#">Home</a></li>
-                        </ul>
+<header id="header" style="background: #f8f8f8; border-color: #e7e7e7" class="border-bottom">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <h5><a class="navbar-brand" href="#">Admin</a></h5>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="col-md-12 col-sm-12">
+            <ul class="nav list-menu-item-l justify-content-lg-end mr-lg-5 pr-lg-5">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-user"></i></a>
+                    <div id="drop-menu" class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Link 1</a>
+                        <a class="dropdown-item" href="#">Link 2</a>
+                        <a class="dropdown-item" href="#">Link 3</a>
                     </div>
-                </div>
-            </div>
-            <div class=" col-8 col-sm-8">
-                <h1 id="logo-header"><a href="#"><img src="https://thucpham.com/wp-content/themes/shop/images/thucpham-logo.png?x89043"></a></h1>
-            </div>
-            <div class="col-12">
-                <form class="form-group text-input-search ml-sm-5">
-                    <input type="text" class="border-left form-control float-left mb-2 ml-1" placeholder="Nhập thú cưng cần tìm...">
-                    <button type="submit" class="btn btn-success mb-2 "><i class="fas fa-search-plus p-1"></i>Search</button>
-                </form>
-
-            </div>
+                </li>
+            </ul>
         </div>
-    </div>
+    </nav>
 </header>
-<div class="container-fluid mt-2 mb-2">
-    <div class="row">
-        <div class="col-lg-3">
-            <div class="list-group">
-                <a href="#" class="list-group-item">Disabled item</a>
-                <a href="#" class="list-group-item">Disabled item</a>
-                <a href="#" class="list-group-item">Third item</a>
+
+<main class="page-wapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 col-lg-2 pr-lg-0 pl-lg-0 border-right">
+                <div class="username-admin">
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo">
+                    <ul class="nav navbar-nav flex-column">
+                        <li class="nav-item">
+                            <form class="form-inline font-search input-group" action="#">
+                                <input type="text" placeholder="Tìm kiếm..." class="form-control">
+                                <span><button type="submit" class=" btn btn-default"><i class="fas fa-search"></i></button></span>
+                            </form>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">User</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Product Phone</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Product PC</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="menu-item-left">
+                    <ul class="nav navbar-nav flex-column">
+                        <li class="nav-item pt-2 pb-2">
+                            <form class="form-inline font-search input-group" action="#">
+                                <input type="text" placeholder="Tìm kiếm..." class="form-control">
+                                <span><button type="submit" class=" btn btn-default"><i class="fas fa-search"></i></button></span>
+                            </form>
+                        </li>
+
+                        <li class="nav-item border-top active">
+                            <a class="nav-link" href="admin">Dashboard</a>
+                        </li>
+                        <li class="nav-item border-top">
+                            <a class="nav-link" href="/userAdmin">User</a>
+                        </li>
+                        <li class="nav-item border-top">
+                            <a class="nav-link" href="#">Product Phone</a>
+                        </li>
+                        <li class="nav-item border-bottom border-top">
+                            <a class="nav-link" href="#">Product PC</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-8 col-lg-10 bg-white">
+                @yield('content')
             </div>
         </div>
-        <div class="col-lg-9">
-            <form id="add-product">
-                <div class="form-group">
-                    <label >Name address</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter name">
-                </div>
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="text" class="form-control" id="phone" placeholder="Enter phone">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
     </div>
-</div>
-
-<script src="{{asset('js/main.js')}}"> </script>
+</main>
+<script src="{{asset('js/user-admin.js')}}"> </script>
 </body>
 </html>

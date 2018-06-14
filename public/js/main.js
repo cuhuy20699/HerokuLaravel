@@ -1,4 +1,5 @@
 var URL_MLAB = 'https://api.mlab.com/api/1/databases/assignment-phone/collections/product-phone?apiKey=K4mVgyqjIRMy6RUEf3uAVIl-jUE1qKgY';
+
 $(document).ready(function () {
     $('#add-product').on('submit',function (e) {
        e.preventDefault();
@@ -18,7 +19,6 @@ $(document).ready(function () {
            error: function (xhr, status,err) {
                console.log(err);
            }
-
        });
 
     });
