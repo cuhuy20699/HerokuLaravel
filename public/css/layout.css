@@ -1,0 +1,77 @@
+.logo{
+    width: 163px;
+}
+
+#logo-header a img{
+    width: 163px;
+}
+.car-menu a{
+    line-height: 55px;
+    font-size: 24px;
+}
+.a{
+    margin: 10px;
+}
+.text-input-search input{
+    width: 75%;
+    padding: 5px 5px;
+    line-height: 25px;
+    font-size: 14px;
+    border: 2px solid #28a745;
+}
+.text-input-search button{
+    padding: 5px 9px;
+    line-height: 25px;
+    font-size: 14px;
+}
+.text-nav-menu{
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+.nav-pills .nav-link{
+    border-radius: 0;
+}
+
+.text-nav-menu a:hover{
+    border-bottom: 2px solid red;
+}
+
+#header-md{
+    box-shadow:5px 5px 4px #92908d;
+}
+
+@media screen and (max-width: 576px){
+    .text-input-search input{
+        width: 71%;
+        padding: 5px 5px;
+        line-height: 20px;
+        font-size: 10px;
+    }
+    .text-input-search button{
+        padding: 4px 6px;
+        line-height: 20px;
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 768px){
+    .btn-outline-success{
+        padding: 6px 4px;
+    }
+    .text-input-search{
+        font-size: 12px;
+    }
+}
+@media screen and  (max-width: 991px){
+    #header-md{
+        visibility: hidden;
+        display: none;
+    }
+}
+@media screen and (min-width: 991px){
+    #header-sm{
+        visibility: hidden;
+        display: none;
+    }
+}

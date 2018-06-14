@@ -5,13 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>@yield('title')</title>
+    <title>Master</title>
     <meta content="{{csrf_token()}}" name="csrf-token">
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
     <link href="{{asset('css/layout.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <script src="{{asset('js/app.js')}}"> </script>
-    <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
 </head>
 <body>
 
@@ -85,28 +84,21 @@
             </div>
         </div>
         <div class="col-lg-9">
-            @yield('content')
+            <form id="add-product">
+                <div class="form-group">
+                    <label >Name address</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter name">
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Enter phone">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
     </div>
 </div>
 
-<footer class="container">
-    <div class="card text-center">
-        <div class="card-header">
-            Featured
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        </div>
-        <div class="card-footer text-muted">
-            2 days ago
-        </div>
-    </div>
-</footer>
-<script>
-    CKEDITOR.replace( 'summary-ckeditor' );
-</script>
+<script src="{{asset('js/main.js')}}"> </script>
 </body>
 </html>
-{{--<a id="show-menu" href="" class="__web-inspector-hide-shortcut__"><i class="fa fa-align-justify"></i></a>--}}
