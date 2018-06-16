@@ -15,7 +15,7 @@
             <!-- /.col-lg-12 -->
         </div>
         <div class="col-lg-12">
-            <div class="panel panel-default">
+            <div class="panel panel-primary">
                 <div class="panel-heading">
                     List User
                 </div>
@@ -32,6 +32,7 @@
                                     <th>Emai</th>
                                     <th>Create At</th>
                                     <th>Update At</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody id="demo-get">

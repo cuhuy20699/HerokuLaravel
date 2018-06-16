@@ -1,6 +1,7 @@
 var API = 'https://api.mlab.com/api/1/databases/storephone/collections/user?apiKey=bwNYaefhPGW4uN-jmu-pBF-gzp7FiG4M';
 
 $(document).ready(function () {
+
     $('#add-user').on('submit',function (e) {
         e.preventDefault();
         var fullname = $('#fullname').val();
@@ -18,8 +19,8 @@ $(document).ready(function () {
                 "email": email,
                 "salt": random,
                 "status":1,
-                "created-at" : date.toLocaleDateString(),
-                "updated-at":date.toLocaleDateString(),
+                "created_at" : date.toLocaleDateString(),
+                "updated_at":date.toLocaleDateString(),
             }),
             type : "POST",
             contentType : "application/json",
