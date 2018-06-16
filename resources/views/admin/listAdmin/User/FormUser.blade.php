@@ -44,25 +44,32 @@
                                     <input type="email" class="form-control" id="email" placeholder="Nhập email" >
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-md-2 col-form-label text-right">Salt</label>
-                                <div class="col-md-8">
-                                    <input type="text" class="form-control" id="salt" placeholder="Nhập tên đầy đủ" >
-                                </div>
-                            </div>
-
                             {{--<div class="form-group row">--}}
-                                {{--<label class="col-md-2 col-form-label text-right">Status</label>--}}
+                                {{--<label class="col-md-2 col-form-label text-right">Salt</label>--}}
                                 {{--<div class="col-md-8">--}}
-                                    {{--<input type="text" class="form-control" id="status" placeholder="Nhập số điện thoại">--}}
+                                    {{--<input type="text" class="form-control" id="salt" placeholder="Nhập tên đầy đủ" >--}}
                                 {{--</div>--}}
                             {{--</div>--}}
+
+                            <div class="form-group row">
+                                <label class="col-md-2 col-form-label text-right">Gender</label>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="gender" placeholder="Nhập giới tính của bạn">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-md-2 col-form-label text-right">Avatar</label>
+                                <div class="col-md-8">
+                                    <input type="file" id="avatar" >
+                                </div>
+                            </div>
                             <div class="form-group row">
                                 <div class="col-md-4">
                                     <label></label>
                                 </div>
                                 <div class="col-md-8">
                                     <button type="submit" class="btn btn-default">Submit</button>
+                                    <button type="reset" class="btn btn-default">Reset</button>
                                 </div>
                             </div>
                         </form>

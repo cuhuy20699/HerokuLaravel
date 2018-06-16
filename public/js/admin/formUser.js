@@ -8,8 +8,11 @@ $(document).ready(function () {
         var phone = $('#phone').val();
         var password = $('#password').val();
         var email = $('#email').val();
+        var role = 2; // Thành viên là 2, Admin là 1
+        var gender = $('#gender').val();
         var random = Math.floor((Math.random() * 1000000) + 1);
         var date =new Date();
+        var img = $('#avatar').val();
         $.ajax({
             url:API,
             data: JSON.stringify({
@@ -17,15 +20,18 @@ $(document).ready(function () {
                 "phone" : phone,
                 "password":password,
                 "email": email,
+                "role": role,
+                "gender": gender,
                 "salt": random,
                 "status":1,
+                "avatar": img,
                 "created_at" : date.toLocaleDateString(),
                 "updated_at":date.toLocaleDateString(),
             }),
             type : "POST",
-            contentType : "application/json",
+            contentType : "application/json;charset=utf-8",
             success: function (data) {
-                window.location.href ="/formUserAdmin"
+                window.location.href ="/listUserAdmin"
             },
             error: function (xhr, status, err) {
                console.log(err);
