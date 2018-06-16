@@ -73,8 +73,6 @@
                                 </div>
                             </div>
                         </form>
-
-                    <!-- /.row (nested) -->
                 </div>
                 <!-- /.panel-body -->
             </div>
