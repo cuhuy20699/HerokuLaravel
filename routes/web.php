@@ -11,8 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/admin', 'ProductController@index');
-Route::get('/userAdmin', 'ProductController@userAdmin');
+Route::get('/', 'AdminController@index');
+
+Route::get('/loginAdmin', 'AdminController@loginAdmin');
+
+Route::get('/listUserAdmin', 'AdminController@listUser');
+
+Route::get('/formUserAdmin', 'AdminController@formUser');

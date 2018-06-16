@@ -1,5 +1,5 @@
 @extends('master')
-@section('title', 'User Admin')
+@section('title', 'user Admin')
 @section('content')
     <p>demo</p>
 @endsection
