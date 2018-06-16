@@ -50,17 +50,24 @@
                                     {{--<input type="text" class="form-control" id="salt" placeholder="Nhập tên đầy đủ" >--}}
                                 {{--</div>--}}
                             {{--</div>--}}
-
                             <div class="form-group row">
                                 <label class="col-md-2 col-form-label text-right">Gender</label>
                                 <div class="col-md-8">
-                                    <input type="text" class="form-control" id="gender" placeholder="Nhập giới tính của bạn">
+                                    <label class="radio-inline">
+                                        <input type="radio" name="gender"  value="male" checked>Male
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="gender"  value="famale">Famale
+                                    </label>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="gender"  value="orther">Khác
+                                    </label>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-md-2 col-form-label text-right">Avatar</label>
                                 <div class="col-md-8">
-                                    <input type="file" id="avatar" >
+                                    <input type="file" id="avatar">
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -69,7 +76,7 @@
                                 </div>
                                 <div class="col-md-8">
                                     <button type="submit" class="btn btn-default">Submit</button>
-                                    <button type="reset" class="btn btn-default">Reset</button>
+                                    <button type="Reset" class="btn btn-default">Reset</button>
                                 </div>
                             </div>
                         </form>
@@ -91,5 +98,6 @@
     <script src="{{asset('vendor-admin/datatables-responsive/dataTables.responsive.js')}}"> </script>
 
     <script src="{{asset('vendor-admin/datatables-responsive/dataTables.responsive.js')}}"> </script>
+
     <script src="{{asset('js/admin/formUser.js')}}"> </script>
 @endsection

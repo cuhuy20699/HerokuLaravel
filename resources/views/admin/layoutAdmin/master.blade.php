@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +9,7 @@
     <title>@yield('title')</title>
     <meta content="{{csrf_token()}}" name="csrf-token">
     @yield('style')
+
     <link href="{{asset('vendor-admin/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
     <link href="{{asset('vendor-admin/metisMenu/metisMenu.min.css')}}" rel="stylesheet">
@@ -19,6 +19,8 @@
     <link href="{{asset('vendor-admin/morrisjs/morris.css')}}" rel="stylesheet">
 
     <link href="{{asset('vendor-admin/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{asset('https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css')}}">
 
     <script src="{{asset('https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')}}"> </script>
     <script src="{{asset('https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')}}"> </script>

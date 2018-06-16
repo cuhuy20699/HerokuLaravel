@@ -26,10 +26,12 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
+                                    <th>Image</th>
                                     <th>FullName</th>
                                     <th>Phone</th>
                                     <th>Password</th>
                                     <th>Emai</th>
+                                    <th>Gender</th>
                                     <th>Create At</th>
                                     <th>Update At</th>
                                     <th>Action</th>
