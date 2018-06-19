@@ -11,7 +11,7 @@
 |
 */
 
-Route::resource('user', 'UserMembersController');
+//Route::resource('user', 'UserMembersController');
 
 Route::get('/', 'AdminController@index');
 
