@@ -3,8 +3,6 @@ var API = "https://api.mlab.com/api/1/databases/storephone/collections/user?apiK
 $(document).ready(function () {
     getApi();
 
-
-
     $('body').on('click', '#deleteUser', function (e) {
         e.preventDefault();
         var id = $(this).data('id');
@@ -44,13 +42,12 @@ function getApi() {
                 output += '<td>'+data.created_at +'</td>';
                 output += '<td>'+data.updated_at +'</td>';
                 output += '<td>' +
-                    '<a href="#" class="fa fa-edit"> Edit</a> <p> </p> ' +
+                    '<a href="/formUserAdmin" id="putUser" data-id="'+data._id.$oid+'" data-updated_at="'+data.updated_at+'" data-avatar="'+data.avatar+'" data-fullname="'+data.fullname+'" data-phone="'+data.phone+'" data.password="'+data.password+'" data-email="'+data.email+'" data-gender="'+data.gender+'" class="fa fa-edit"> Edit</a> <p> </p> ' +
                     '<a href="#" id="deleteUser" data-id="'+data._id.$oid+'" class="fa fa-trash"> Delete</a>'+'' +
                     '</td>';
                 output += '</tr>';
         });
         // in vào List User
         $('#demo-get').html(output);
-
     });
 }

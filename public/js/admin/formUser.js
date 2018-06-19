@@ -3,30 +3,9 @@ var API = 'https://api.mlab.com/api/1/databases/storephone/collections/user?apiK
 var CLOUDINARY_URL = 'https://api.cloudinary.com/v1_1/aptech-fpt/upload';
 var CLOUDINARY_UPLOAD_PRESET = 'DemoImg';
 var imgPreview = '';
-var fileUpload = document.getElementById('avatar');
 
 $(document).ready(function () {
-    fileUpload.addEventListener('change', function (event) {
-        var file = event.target.files[0];
-        var formData = new FormData();
-        formData.append('file',file);
-        formData.append('upload_preset',CLOUDINARY_UPLOAD_PRESET);
-        $.ajax({
-            url: CLOUDINARY_URL,
-            type: 'POST',
-            data: formData,
-            cache: false,
-            contentType: false,
-            processData: false,
-            success: function (res) {
-                imgPreview= res.secure_url;
-            },
-            error: function (res, message) {
-                console.log(res + message);
-            }
-        });
-    });
-
+    uploadImg();
     $('#add-user').on('submit',function (e) {
         e.preventDefault();
         var fullname = $('#fullname').val();
@@ -62,6 +41,30 @@ $(document).ready(function () {
                console.log(err + 'Lỗi');
             }
         });
-
     });
+    function uploadImg() {
+        var fileUpload = document.getElementById('avatar');
+        fileUpload.addEventListener('change', function (event) {
+            var file = event.target.files[0];
+            var formData = new FormData();
+            formData.append('file',file);
+            formData.append('upload_preset',CLOUDINARY_UPLOAD_PRESET);
+            $.ajax({
+                url: CLOUDINARY_URL,
+                type: 'POST',
+                data: formData,
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (res) {
+                    imgPreview= res.secure_url;
+                    console.log('Upload Img Thành Công');
+                },
+                error: function (res, message) {
+                    console.log(res + message);
+                }
+            });
+        });
+    }
 });
+

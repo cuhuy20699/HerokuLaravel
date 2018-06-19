@@ -50,9 +50,6 @@
         </div>
 
     </div>
-    <div class="row">
-        <div id="getDemo"></div>
-    </div>
 @endsection
 
 @section('js')

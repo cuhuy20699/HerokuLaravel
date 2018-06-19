@@ -39,6 +39,13 @@
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <label class="col-md-2 col-form-label text-right">Avatar</label>
+                                <div class="col-md-8">
+                                    <input type="file" id="avatar">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
                                 <label class="col-md-2 col-form-label text-right">Email</label>
                                 <div class="col-md-8">
                                     <input type="email" class="form-control" id="email" placeholder="Nhập email" >
@@ -62,12 +69,6 @@
                                     <label class="radio-inline">
                                         <input type="radio" name="gender"  value="orther">Khác
                                     </label>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-md-2 col-form-label text-right">Avatar</label>
-                                <div class="col-md-8">
-                                    <input type="file" id="avatar">
                                 </div>
                             </div>
                             <div class="form-group row">
