@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\UserMember;
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Request;
+
 
 class UserMembersController extends Controller
 {
@@ -25,7 +27,7 @@ class UserMembersController extends Controller
      */
     public function create()
     {
-        return 'demo';
+       //
     }
 
     /**
@@ -50,7 +52,7 @@ class UserMembersController extends Controller
             'avatar' => 'required',
         ]);
         if ($validator->fails()) {
-            return redirect('form')
+            return redirect('admin.listAdmin.User.FormUser')
                 ->withErrors($validator->errors())
                 ->withInput();
         }
@@ -81,7 +83,7 @@ class UserMembersController extends Controller
     {
         $user = UserMember::find($id);
         if ($user === null) {
-            return 'error';
+            return view('errors.404');
         }
         return response()->json($user,201);
     }
@@ -94,7 +96,7 @@ class UserMembersController extends Controller
      */
     public function edit($id)
     {
-        return 'demo';
+        $user = UserMember::find($id);
     }
 
     /**
@@ -127,7 +129,7 @@ class UserMembersController extends Controller
 
         $user = UserMember::find($id);
         if ($user === null) {
-            return 'error';
+            return view('errors.404');
         }
         $user->fullname = $userJson['fullname'];
         $user->phone = $userJson['phone'];
@@ -152,6 +154,10 @@ class UserMembersController extends Controller
     public function destroy($id)
     {
         $user = UserMember::destroy($id);
-        return 'Success';
+        if(!$user){
+            return response()->json(['error' => 'Error : User not found']);
+        }
+        $user -> delete();
+        return response()->json(['success']);
     }
 }

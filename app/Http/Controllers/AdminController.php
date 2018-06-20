@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\UserMember;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -13,7 +14,8 @@ class AdminController extends Controller
         return view('admin.listAdmin.login');
     }
     public function listUser(){
-        return view('admin.listAdmin.User.ListUser');
+        $user = UserMember::all();
+        return view('admin.listAdmin.User.ListUser')->with('user',$user) ;
     }
     public function formUser(){
         return view('admin.listAdmin.User.FormUser');
