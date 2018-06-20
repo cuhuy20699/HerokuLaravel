@@ -143,6 +143,7 @@ class UserMembersController extends Controller
     public function destroy($id)
     {
         $user = UserMember::destroy($id);
+
         if(!$user){
             return response()->json(['error' => 'Error : User not found']);
         }
