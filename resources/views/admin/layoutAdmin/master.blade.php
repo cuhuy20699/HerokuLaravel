@@ -20,10 +20,10 @@
 
     <link href="{{asset('vendor-admin/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{asset('http://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css')}}">
+    <link rel="stylesheet" href="{{asset('https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css')}}">
 
-    <script src="{{asset('http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')}}"> </script>
-    <script src="{{asset('http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')}}"> </script>
+    <script src="{{asset('https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')}}"> </script>
+    <script src="{{asset('https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')}}"> </script>
 
 </head>
 
