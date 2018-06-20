@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\UserMember;
-use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
 
 
 class UserMembersController extends Controller
@@ -40,8 +41,8 @@ class UserMembersController extends Controller
     {
         $userJson = $request->json()->all();
 
-        $validator = Validator::make($request->all(), [
-            'fullname' => 'required|unique:UserMember|max:50',
+        $validator = Validator::make($userJson, [
+            'fullname' => 'required|unique:user_members|max:50',
             'phone' => 'required',
             'password' => 'required',
             'gender' => 'required',
@@ -52,14 +53,9 @@ class UserMembersController extends Controller
             'avatar' => 'required',
         ]);
         if ($validator->fails()) {
-            return redirect('admin.listAdmin.User.FormUser')
-                ->withErrors($validator->errors())
-                ->withInput();
+            return response()->json($validator->errors(),404);
         }
         $user = new UserMember();
-        if ($user === null) {
-            return view("errors.404");
-        }
         $user->fullname = $userJson['fullname'];
         $user->phone = $userJson['phone'];
         $user->password = $userJson['password'];
@@ -70,7 +66,7 @@ class UserMembersController extends Controller
         $user->status = $userJson['status'];
         $user->avatar = $userJson['avatar'];
         $user->save();
-        return response()->json($userJson,201);
+        return response()->json($user,201);
     }
 
     /**
@@ -109,8 +105,8 @@ class UserMembersController extends Controller
     public function update(Request $request, $id)
     {   $userJson = $request->json()->all();
 
-        $validator = Validator::make($request->all(), [
-            'fullname' => 'required|unique:UserMember|max:50',
+        $validator = Validator::make($userJson, [
+            'fullname' => 'required|unique:user_members|max:50',
             'phone' => 'required',
             'password' => 'required',
             'gender' => 'required',
@@ -120,17 +116,11 @@ class UserMembersController extends Controller
             'status' => 'required',
             'avatar' => 'required',
         ]);
-
         if ($validator->fails()) {
-            return redirect('form')
-                ->withErrors($validator->errors())
-                ->withInput();
+            return response()->json($validator->errors(),404);
         }
 
         $user = UserMember::find($id);
-        if ($user === null) {
-            return view('errors.404');
-        }
         $user->fullname = $userJson['fullname'];
         $user->phone = $userJson['phone'];
         $user->password = $userJson['password'];
@@ -141,8 +131,7 @@ class UserMembersController extends Controller
         $user->status = $userJson['status'];
         $user->avatar = $userJson['avatar'];
         $user->save();
-        return response()->json($userJson,201);
-
+        return response()->json($user,201);
     }
 
     /**
