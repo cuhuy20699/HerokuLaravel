@@ -274,10 +274,10 @@
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> User<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="/formUserAdmin"><i class="fa fa-edit fa-fw"></i> Create User</a>
+                                <a href="/user/create"><i class="fa fa-edit fa-fw"></i> Create User</a>
                             </li>
                             <li>
-                                <a href="/listUserAdmin"><i class="fa fa-table fa-fw"></i> List User</a>
+                                <a href="/user"><i class="fa fa-table fa-fw"></i> List User</a>
                             </li>
                         </ul>
                         <!-- /.nav-second-level -->

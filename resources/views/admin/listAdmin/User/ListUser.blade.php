@@ -39,7 +39,7 @@
                             </tbody>
                             <tbody >
                             @foreach($user as $item)
-                                <tr>
+                                <tr id="{{$item->id}}">
                                     <td></td>
                                     <th class="col-md-2">
                                         <div class="card"
@@ -47,16 +47,16 @@
                                         </div>
                                         {{--<img src="" style=" with:60px; height: 60px" class="img-thumbnail">--}}
                                     </th>
-                                    <td>{{$item->fullname}} </td>
-                                    <td> {{$item->phone}} </td>
-                                    <td>{{$item->password}}</td>
-                                    <td>{{$item->email}}</td>
-                                    <td>{{$item->gender}}</td>
+                                    <td id="fullname-{{$item->id}}">{{$item->fullname}} </td>
+                                    <td id="phone-{{$item->id}}"> {{$item->phone}} </td>
+                                    <td id="password-{{$item->id}}">{{$item->password}}</td>
+                                    <td id="email-{{$item->id}}" >{{$item->email}}</td>
+                                    <td id="gender-{{$item->id}}">{{$item->gender}}</td>
                                     {{--<td>{{$item->create_at}}</td>--}}
                                     {{--<td>{{$item->update_at}}</td>--}}
                                     <td>
-                                        <a href="#" id="putUser" class="fa fa-edit"> Edit</a> <p> </p>
-                                        <a href="#" id="deleteUser" class="fa fa-trash"> Delete</a>
+                                        <a href="/user/{{$item->id}}/edit" id="putUser" class="fa fa-edit"> Edit</a> <p> </p>
+                                        <a href="/user/{{$item->id}}" id="deleteUser" class="fa fa-trash"> Delete</a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -79,5 +79,5 @@
     <script src="{{asset('vendor-admin/datatables-plugins/dataTables.bootstrap.min.js')}}"> </script>
 
     <script src="{{asset('vendor-admin/datatables-responsive/dataTables.responsive.js')}}"> </script>
-    <script src="{{asset('js/admin/listUser.js')}}"> </script>
+    {{--<script src="{{asset('js/admin/listUser.js')}}"> </script>--}}
 @endsection

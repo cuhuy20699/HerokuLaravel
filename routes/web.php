@@ -11,12 +11,13 @@
 |
 */
 
-//Route::resource('user', 'UserMembersController');
+Route::resource('user','UsersController');
 
+//
 Route::get('/', 'AdminController@index');
-
-Route::get('/loginAdmin', 'AdminController@loginAdmin');
-
-Route::get('/listUserAdmin', 'AdminController@listUser');
-
-Route::get('/formUserAdmin', 'AdminController@formUser');
+//
+//Route::get('/loginAdmin', 'AdminController@loginAdmin');
+//
+//Route::get('/listUserAdmin', 'AdminController@listUser');
+//
+//Route::get('/formUserAdmin', 'AdminController@formUser');
