@@ -15,6 +15,8 @@ Route::resource('user','UsersController');
 
 //
 Route::get('/', 'AdminController@index');
+
+Route::get('/delete/id', 'UsersController@destroy');
 //
 //Route::get('/loginAdmin', 'AdminController@loginAdmin');
 //

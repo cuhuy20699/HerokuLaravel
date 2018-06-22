@@ -73,7 +73,7 @@ class UsersController extends Controller
         $file->store('public/uploaded');
 
         $user->save();
-        return 'success';
+        return redirect('user');
     }
 
     /**

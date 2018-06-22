@@ -56,7 +56,7 @@
                                     {{--<td>{{$item->update_at}}</td>--}}
                                     <td>
                                         <a href="/user/{{$item->id}}/edit" id="putUser" class="fa fa-edit"> Edit</a> <p> </p>
-                                        <a href="/user/{{$item->id}}" id="deleteUser" class="fa fa-trash"> Delete</a>
+                                        <a href="/delete/{{$item->id}}" id="deleteUser" class="fa fa-trash"> Delete</a>
                                     </td>
                                 </tr>
                             @endforeach
