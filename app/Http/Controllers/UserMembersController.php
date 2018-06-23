@@ -148,6 +148,6 @@ class UserMembersController extends Controller
             return response()->json(['error' => 'Error : User not found']);
         }
         $user -> delete();
-        return response()->json(['success']);
+        return response()->json($user,201);
     }
 }
