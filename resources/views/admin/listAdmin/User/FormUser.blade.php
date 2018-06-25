@@ -83,6 +83,7 @@
                             <label class="col-md-2 col-form-label text-right">Avatar</label>
                             <div class="col-md-8">
                                 <input type="file" name="avatar" id="avatar">
+                                <input type="text" name="avatar2" id="avatar2">
                                 <small class="text-danger">{{$errors->first('avatar')}}</small>
                             </div>
                         </div>
@@ -115,5 +116,5 @@
 
     <script src="{{asset('vendor-admin/datatables-responsive/dataTables.responsive.js')}}"> </script>
 
-    {{--<script src="{{asset('js/admin/formUser.js')}}"> </script>--}}
+    <script src="{{asset('js/admin/formUser.js')}}"> </script>
 @endsection

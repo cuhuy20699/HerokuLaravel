@@ -48,7 +48,7 @@ class UsersController extends Controller
             'password' => 'required',
             'email' => 'required',
             'gender' => 'required',
-            'avatar' => 'required'
+//            'avatar' => 'required'
         ]);
         if ($validator->fails()) {
             return redirect('admin/listAdmin/User/FormUser')
@@ -65,12 +65,13 @@ class UsersController extends Controller
         $user->salt = rand();
         $user->role = '1';
         $user->status = 1;
-        $file = $request->file('avatar');
-        if (File::exists($file)) {
-            $file->store('public/uploaded');
-            $user->avatar = "storage/uploaded/" . $file->hashName();
-        }
-        $file->store('public/uploaded');
+        $user->avatar = $request->get('avatar2');
+//        $file = $request->file('avatar');
+//        if (File::exists($file)) {
+//            $file->store('public/uploaded');
+//            $user->avatar = "storage/uploaded/" . $file->hashName();
+//        }
+//        $file->store('public/uploaded');
 
         $user->save();
         return redirect('user');
