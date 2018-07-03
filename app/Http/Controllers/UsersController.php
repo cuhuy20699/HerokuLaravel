@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 use App\UserMember;
+use App\Order;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
 
 class UsersController extends Controller
 {
@@ -17,7 +19,8 @@ class UsersController extends Controller
     public function index()
     {
         $user = UserMember::all();
-        return view('admin.listAdmin.User.ListUser')->with('user',$user) ;
+//        $order = UserMember::find(3)->order;
+        return view('admin.listAdmin.User.ListUser')->with('user',$user);
     }
 
     /**
@@ -48,10 +51,10 @@ class UsersController extends Controller
             'password' => 'required',
             'email' => 'required',
             'gender' => 'required',
-//            'avatar' => 'required'
+            'avatar' => 'required'
         ]);
         if ($validator->fails()) {
-            return redirect('admin/listAdmin/User/FormUser')
+            return redirect('user/create')
                 ->withErrors($validator->errors())
                 ->withInput();
         }
@@ -63,9 +66,10 @@ class UsersController extends Controller
         $user->gender = $request->get("gender");
         $user->email = $request->get("email");
         $user->salt = rand();
-        $user->role = '1';
-        $user->status = 1;
+        $user->role = 1;
+        $user->status = '1';
         $user->avatar = $request->get('avatar2');
+
 //        $file = $request->file('avatar');
 //        if (File::exists($file)) {
 //            $file->store('public/uploaded');
@@ -85,7 +89,7 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -130,7 +134,7 @@ class UsersController extends Controller
         $user->salt = rand();
         $user->role = '1';
         $user->status = 1;
-        $user->avatar = "";
+        $user->avatar = $request->get('avatar2');
         $user->save();
         if ($request->get("isAjax")) {
             return $user;
@@ -149,6 +153,9 @@ class UsersController extends Controller
     {
         $user = UserMember::find($id);
         $user->delete();
-        return view('admin.listAdmin.User.ListUser');
+//    $table->integer('demo_id')->unsigned();
+//            $table->foreign('demo_id')->references('id')->on('user_members');
+        return redirect("user");
     }
+
 }

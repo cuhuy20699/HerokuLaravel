@@ -52,11 +52,13 @@
                                     <td id="password-{{$item->id}}">{{$item->password}}</td>
                                     <td id="email-{{$item->id}}" >{{$item->email}}</td>
                                     <td id="gender-{{$item->id}}">{{$item->gender}}</td>
+                                    {{--<p>{{$item->orders->product}}</p>--}}
                                     {{--<td>{{$item->create_at}}</td>--}}
                                     {{--<td>{{$item->update_at}}</td>--}}
                                     <td>
                                         <a href="/user/{{$item->id}}/edit" id="putUser" class="fa fa-edit"> Edit</a> <p> </p>
-                                        <a href="/delete/{{$item->id}}" id="deleteUser" class="fa fa-trash"> Delete</a>
+
+                                        <a href="#" id="delete-{{$item->id}}" class="fa fa-trash btn-delete"> Delete</a>
                                     </td>
                                 </tr>
                             @endforeach
@@ -71,13 +73,68 @@
         </div>
 
     </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Bạn có chắc muốn xoá?</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modalContent">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="btnConfirmDelete">Sure</button>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @section('js')
+
+    <script>
+        var deleteId = '';
+        $('.btn-delete').click(function () {
+            deleteId = $(this).attr("id").replace('delete-', '');
+            var name = $('#fullname-' + deleteId).text();
+            name = "Sản phẩm với tên là: '" + name + "'";
+            $('#modalContent').text(name);
+            $('#exampleModal').modal('show');
+        });
+        $('#btnConfirmDelete').click(function () {
+            $.ajax({
+                type: 'DELETE',
+                url: '/user/' + deleteId,
+                data: {
+                    "_token": "{{ csrf_token() }}",
+                },
+                success: function () {
+                    $('#messageSuccess').text('Action success!');
+                    $('#exampleModal').modal('hide');
+                    $('#messageSuccess').removeClass('d-none');
+                    $('#'. deleteId).hide();
+                },
+                error: function () {
+                    $('#messageError').removeClass('d-none');
+                    $('#messageError').text('Action fails! Please try again later!');
+                    $('#exampleModal').modal('hide');
+                }
+            });
+
+        });
+    </script>
+
+
+
     <script src="{{asset('vendor-admin/datatables/js/jquery.dataTables.min.js')}}"> </script>
 
     <script src="{{asset('vendor-admin/datatables-plugins/dataTables.bootstrap.min.js')}}"> </script>
 
     <script src="{{asset('vendor-admin/datatables-responsive/dataTables.responsive.js')}}"> </script>
-    {{--<script src="{{asset('js/admin/listUser.js')}}"> </script>--}}
+    <script src="{{asset('js/admin/listUser.js')}}"> </script>
 @endsection

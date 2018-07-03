@@ -12,7 +12,11 @@ class OrderTableSeeder extends Seeder
     public function run()
     {
         DB::table('orders')->insert([
-            ['userId'=>10,'productName'=>'Bánh mỳ','price'=>12212],
+            ['UserId'=>3,'product'=>'Iphone X','price'=>18000000],
+            ['UserId'=>6,'product'=>'Samsung Galaxy','price'=>1000000],
+            ['UserId'=>7,'product'=>'Sony','price'=>12000000],
+            ['UserId'=>7,'product'=>'Iphone 6s','price'=>8000000],
         ]);
+
     }
 }

@@ -20,10 +20,11 @@ class CreateUserMembersTable extends Migration
             $table->string('password');
             $table->string('gender');
             $table->string('email');
-            $table ->string('salt');
-            $table->string('role');
-            $table->integer('status');
+            $table->string('salt');
+            $table->integer('role');
+            $table->string('status');
             $table->string('avatar');
+            $table->rememberToken();
             $table->timestamps();
         });
     }

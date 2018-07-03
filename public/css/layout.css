@@ -20,6 +20,27 @@
 .menu-item-left ul li.active{
     background: #eeeeee;
 }
+.input-group .icon-check{
+    color: forestgreen;
+    border: none;
+    font-size: 18px;
+    background: none;
+}
+
+.fullname-group, .phone-group, .password-group, .email-group{
+    position: relative;
+}
+.fullname-icon-err,.phone-icon-err,.email-icon-err,.password-icon-err{
+    display: inline-block;
+    position: absolute;
+    right: 25px;
+    bottom: 2px;
+    font-size: 18px;
+    color: #2ecc10;
+}
+.email-icon-err, .password-icon-err{
+
+}
 
 @media screen and (min-width: 768px){
 

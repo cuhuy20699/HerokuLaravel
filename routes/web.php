@@ -13,13 +13,13 @@
 
 Route::resource('user','UsersController');
 
-//
 Route::get('/', 'AdminController@index');
 
-Route::get('/delete/id', 'UsersController@destroy');
-//
-//Route::get('/loginAdmin', 'AdminController@loginAdmin');
-//
+Route::get('/loginAdmin', 'AdminController@loginAdmin');
+
+Route::get('/query', 'AdminController@query');
+Route::get('/chart','AdminController@chart');
+
 //Route::get('/listUserAdmin', 'AdminController@listUser');
 //
 //Route::get('/formUserAdmin', 'AdminController@formUser');

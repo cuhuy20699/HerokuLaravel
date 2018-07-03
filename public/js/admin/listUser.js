@@ -1,7 +1,6 @@
 var API = "https://api.mlab.com/api/1/databases/storephone/collections/user?apiKey=bwNYaefhPGW4uN-jmu-pBF-gzp7FiG4M";
-
+var API2 = "https://youtube-api-challenger.appspot.com/members";
 $(document).ready(function () {
-    getApi();
 
     $('body').on('click', '#deleteUser', function (e) {
         e.preventDefault();
@@ -25,7 +24,7 @@ $(document).ready(function () {
 
 function getApi() {
     $.ajax({
-        url: API
+        url: 'http://heroku-laravel-1900.herokuapp.com/api/user'
     }).done(function (data) {
         var output = '';
         $.each(data, function (key, data) {
@@ -50,4 +49,20 @@ function getApi() {
         // in vào List User
         $('#demo-get').html(output);
     });
+}
+
+function getAPI2(){
+    var ajaxhttp = new XMLHttpRequest();
+    ajaxhttp.open("GET", API2, true);
+    ajaxhttp.setRequestHeader("content-type", "application/json");
+    ajaxhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200){
+            var text = JSON.parse(ajaxhttp.responseText);
+            console.log("ok");
+        }else
+        {
+            console.log('err');
+        }
+    };
+    ajaxhttp.send();
 }
