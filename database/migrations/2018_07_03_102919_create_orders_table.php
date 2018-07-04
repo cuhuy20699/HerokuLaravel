@@ -17,7 +17,10 @@ class CreateOrdersTable extends Migration
             $table->increments('id');
             $table->integer('UserId')->unsigned();
             $table->foreign('UserId')->references('id')->on('user_members');
-            $table->string('product');
+            $table->string('title');
+            $table->integer('category');
+            $table->string('description');
+            $table->string('img');
             $table->integer('price');
             $table->timestamps();
         });

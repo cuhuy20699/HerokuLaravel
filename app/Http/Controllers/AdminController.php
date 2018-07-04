@@ -16,12 +16,12 @@ class AdminController extends Controller
     }
 
     public function query(){
-        $order = DB::table('orders')->join('user_members','orders.UserId','=','user_members.id')
-            ->select('orders.*','user_members.fullname','user_members.avatar')->where('user_members.id','=','3')
-            ->get();
 //        $order = DB::table('orders')->join('user_members','orders.UserId','=','user_members.id')
-//            ->select('orders.*','user_members.fullname','user_members.avatar')
+//            ->select('orders.*','user_members.fullname','user_members.avatar')->where('user_members.id','=','3')
 //            ->get();
+        $order = DB::table('orders')->join('user_members','orders.UserId','=','user_members.id')
+            ->select('orders.*','user_members.fullname','user_members.avatar')
+            ->get();
         return view('admin.listAdmin.Order.OrderUser')->with('order',$order);
     }
 
