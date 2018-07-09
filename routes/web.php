@@ -18,8 +18,8 @@ Route::get('/', 'AdminController@index');
 Route::get('/loginAdmin', 'AdminController@loginAdmin');
 
 Route::get('/query', 'AdminController@query');
-Route::get('/chart','AdminController@chart');
+//Route::get('/chart','AdminController@chart');
 
-//Route::get('/listUserAdmin', 'AdminController@listUser');
+Route::get('/chart', 'ChartController@index');
 //
 //Route::get('/formUserAdmin', 'AdminController@formUser');

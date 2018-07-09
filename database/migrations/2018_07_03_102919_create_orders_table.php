@@ -13,7 +13,7 @@ class CreateOrdersTable extends Migration
      */
     public function up()
     {
-        Schema::create('orders', function (Blueprint $table) {
+        Schema::create('orders_detail', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('UserId')->unsigned();
             $table->foreign('UserId')->references('id')->on('user_members');
@@ -33,6 +33,6 @@ class CreateOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orders');
+        Schema::dropIfExists('orders_detail');
     }
 }

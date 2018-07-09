@@ -25,9 +25,9 @@ class AdminController extends Controller
         return view('admin.listAdmin.Order.OrderUser')->with('order',$order);
     }
 
-    public function chart(){
-        return view('admin.listAdmin.Chart.HighChart');
-    }
+//    public function chart(){
+//        return view('admin.listAdmin.Chart.HighChart');
+//    }
 
 
 //    public function listUser(){

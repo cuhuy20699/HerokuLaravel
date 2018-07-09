@@ -98,6 +98,7 @@
 @section('js')
 
     <script>
+
         var deleteId = '';
         $('.btn-delete').click(function () {
             deleteId = $(this).attr("id").replace('delete-', '');

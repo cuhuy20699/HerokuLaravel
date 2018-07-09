@@ -1,7 +1,8 @@
 var API = "https://api.mlab.com/api/1/databases/storephone/collections/user?apiKey=bwNYaefhPGW4uN-jmu-pBF-gzp7FiG4M";
-var API2 = "https://youtube-api-challenger.appspot.com/members";
-$(document).ready(function () {
+var API2 = "http://heroku-laravel-1900.herokuapp.com/api/user";
 
+$(document).ready(function () {
+    getApi();
     $('body').on('click', '#deleteUser', function (e) {
         e.preventDefault();
         var id = $(this).data('id');
@@ -24,7 +25,11 @@ $(document).ready(function () {
 
 function getApi() {
     $.ajax({
-        url: 'http://heroku-laravel-1900.herokuapp.com/api/user'
+        method: 'get',
+        url: 'http://heroku-laravel-1900.herokuapp.com/api/user',
+        data: {
+            '_token': $('meta[name="csrf-token"]').attr('content')
+        }
     }).done(function (data) {
         var output = '';
         $.each(data, function (key, data) {
