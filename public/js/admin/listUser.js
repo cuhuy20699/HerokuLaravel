@@ -26,13 +26,14 @@ $(document).ready(function () {
 function getApi() {
     $.ajax({
         method: 'get',
-        url: 'http://heroku-laravel-1900.herokuapp.com/api/user',
+        url: 'http://127.0.0.1:8000/api/user',
         data: {
             '_token': $('meta[name="csrf-token"]').attr('content')
         }
     }).done(function (data) {
         var output = '';
         $.each(data, function (key, data) {
+            console.log(data);
                 output += '<tr>';
                 output += '<td></td>';
                 output += '<th class="col-md-2">'+
