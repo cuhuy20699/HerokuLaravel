@@ -26,9 +26,10 @@ $(document).ready(function () {
 function getApi() {
     $.ajax({
         method: 'get',
-        url: 'http://127.0.0.1:8000/api/user',
+        //url: 'http://127.0.0.1:8000/api/user',
         //url: 'http://heroku-laravel-1900.herokuapp.com/api/user',
-        // url: 'http://quiet-cliffs-41062.herokuapp.com/api/user',
+
+        url: 'http://quiet-cliffs-41062.herokuapp.com/api/user',
         data: {
             '_token': $('meta[name="csrf-token"]').attr('content')
         }
