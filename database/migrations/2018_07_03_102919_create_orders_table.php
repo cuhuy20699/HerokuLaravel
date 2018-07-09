@@ -19,7 +19,7 @@ class CreateOrdersTable extends Migration
             $table->foreign('UserId')->references('id')->on('user_members');
             $table->string('title');
             $table->integer('category');
-            $table->string('description');
+            $table->string('description',767);
             $table->string('img');
             $table->integer('price');
             $table->timestamps();
