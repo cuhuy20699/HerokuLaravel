@@ -83,6 +83,10 @@ class UserMembersController extends Controller
         }
         return response()->json($user,201);
     }
+    public function findByPhone(Request $request, $phone){
+        $user = UserMember::where('phone',$phone)->get();
+        return response()->json($user,200);
+    }
 
     /**
      * Show the form for editing the specified resource.

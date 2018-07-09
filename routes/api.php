@@ -17,3 +17,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::resource('/user','UserMembersController');
+Route::get('/user/{phone}','UserMembersController@findByPhone');
