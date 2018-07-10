@@ -19,7 +19,6 @@ class UsersController extends Controller
     public function index()
     {
         $user = UserMember::all();
-//        $order = UserMember::find(3)->order;
         return view('admin.listAdmin.User.ListUser')->with('user',$user);
     }
 
