@@ -28,8 +28,8 @@ function getApi() {
         method: 'get',
         //url: 'http://127.0.0.1:8000/api/user',
         //url: 'http://heroku-laravel-1900.herokuapp.com/api/user',
-        //url: 'http://quiet-cliffs-41062.herokuapp.com/api/user',
-        url: 'https://quiet-cliffs-41062.herokuapp.com/api/products',
+        url: 'http://quiet-cliffs-41062.herokuapp.com/api/user',
+        //url: 'https://quiet-cliffs-41062.herokuapp.com/api/products',
         data: {
             '_token': $('meta[name="csrf-token"]').attr('content')
         }
@@ -37,17 +37,17 @@ function getApi() {
         var output = '';
         $.each(data, function (key, data) {
             console.log(data);
-                // output += '<tr>';
-                // output += '<td></td>';
-                // output += '<th class="col-md-2">'+
-                //         '<div class="card" style="background-image: url('+data.avatar+'); background-size: cover; width: 60px; height: 60px;">'+
-                //         '</div>' + '</th>' ;
-                // output += '<td>'+data.fullname +'</td>';
-                // output += '<td>'+data.phone +'</td>';
-                // output += '<td>'+data.password +'</td>';
-                // output += '<td>'+data.email +'</td>';
-                // output += '<td>'+data.gender +'</td>';
-                // output += '</tr>';
+                output += '<tr>';
+                output += '<td></td>';
+                output += '<th class="col-md-2">'+
+                        '<div class="card" style="background-image: url('+data.avatar+'); background-size: cover; width: 60px; height: 60px;">'+
+                        '</div>' + '</th>' ;
+                output += '<td>'+data.fullname +'</td>';
+                output += '<td>'+data.phone +'</td>';
+                output += '<td>'+data.password +'</td>';
+                output += '<td>'+data.email +'</td>';
+                output += '<td>'+data.gender +'</td>';
+                output += '</tr>';
         });
         // in vào List User
         $('#demo-get').html(output);

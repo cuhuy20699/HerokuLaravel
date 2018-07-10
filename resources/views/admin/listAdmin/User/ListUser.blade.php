@@ -38,27 +38,27 @@
                             <tbody id="demo-get">
                             </tbody>
                             <tbody >
-                            @foreach($user as $item)
-                                <tr id="{{$item->id}}">
-                                    <td></td>
-                                    <th class="col-md-2">
-                                        <div class="card"
-                                             style="background-image: url('{{$item->avatar}}'); background-size: cover; width: 60px; height: 60px;">
-                                        </div>
+                            {{--@foreach($user as $item)--}}
+                                {{--<tr id="{{$item->id}}">--}}
+                                    {{--<td></td>--}}
+                                    {{--<th class="col-md-2">--}}
+                                        {{--<div class="card"--}}
+                                             {{--style="background-image: url('{{$item->avatar}}'); background-size: cover; width: 60px; height: 60px;">--}}
+                                        {{--</div>--}}
                                         {{--<img src="" style=" with:60px; height: 60px" class="img-thumbnail">--}}
-                                    </th>
-                                    <td id="fullname-{{$item->id}}">{{$item->fullname}} </td>
-                                    <td id="phone-{{$item->id}}"> {{$item->phone}} </td>
-                                    <td id="password-{{$item->id}}">{{$item->password}}</td>
-                                    <td id="email-{{$item->id}}" >{{$item->email}}</td>
-                                    <td id="gender-{{$item->id}}">{{$item->gender}}</td>
-                                    <td>
-                                        <a href="/user/{{$item->id}}/edit" id="putUser" class="fa fa-edit"> Edit</a> <p> </p>
+                                    {{--</th>--}}
+                                    {{--<td id="fullname-{{$item->id}}">{{$item->fullname}} </td>--}}
+                                    {{--<td id="phone-{{$item->id}}"> {{$item->phone}} </td>--}}
+                                    {{--<td id="password-{{$item->id}}">{{$item->password}}</td>--}}
+                                    {{--<td id="email-{{$item->id}}" >{{$item->email}}</td>--}}
+                                    {{--<td id="gender-{{$item->id}}">{{$item->gender}}</td>--}}
+                                    {{--<td>--}}
+                                        {{--<a href="/user/{{$item->id}}/edit" id="putUser" class="fa fa-edit"> Edit</a> <p> </p>--}}
 
-                                        <a href="#" id="delete-{{$item->id}}" class="fa fa-trash btn-delete"> Delete</a>
-                                    </td>
-                                </tr>
-                            @endforeach
+                                        {{--<a href="#" id="delete-{{$item->id}}" class="fa fa-trash btn-delete"> Delete</a>--}}
+                                    {{--</td>--}}
+                                {{--</tr>--}}
+                            {{--@endforeach--}}
                             </tbody>
                         </table>
                     </div>
