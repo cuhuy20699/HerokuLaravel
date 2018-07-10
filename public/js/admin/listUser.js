@@ -2,7 +2,7 @@ var API = "https://api.mlab.com/api/1/databases/storephone/collections/user?apiK
 var API2 = "http://heroku-laravel-1900.herokuapp.com/api/user";
 
 $(document).ready(function () {
-    getApi();
+    getAPIdemo();
     $('body').on('click', '#deleteUser', function (e) {
         e.preventDefault();
         var id = $(this).data('id');
@@ -54,18 +54,24 @@ function getApi() {
     });
 }
 
-function getAPI2(){
-    var ajaxhttp = new XMLHttpRequest();
-    ajaxhttp.open("GET", API, true);
-    ajaxhttp.setRequestHeader("content-type", "application/json");
-    ajaxhttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200){
-            var text = JSON.parse(ajaxhttp.responseText);
-            console.log(text);
-        }else
-        {
-            console.log('err');
+
+function getAPIdemo() {
+    var url = 'http://127.0.0.1:8000/api/user';
+    var url1 = 'http://quiet-cliffs-41062.herokuapp.com/api/user';
+    $.ajax({
+       url: url1,
+       type:'GET',
+       contentType: "applycation/json; charset=utf-8",
+        async: false,
+        dataType : 'json',
+        success: function (data, status, jqXHR) {
+            console.log(data)
         }
-    };
-    ajaxhttp.send();
+    }).done(function () {
+        console.log('ok')
+        }).fail(function () {
+            console.log(error())
+        }).always(function () {
+            console.log(error())
+        });
 }
