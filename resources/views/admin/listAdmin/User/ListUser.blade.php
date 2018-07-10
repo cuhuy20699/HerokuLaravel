@@ -52,8 +52,6 @@
                                     <td id="password-{{$item->id}}">{{$item->password}}</td>
                                     <td id="email-{{$item->id}}" >{{$item->email}}</td>
                                     <td id="gender-{{$item->id}}">{{$item->gender}}</td>
-                                    <td>{{$item->create_at}}</td>
-                                    <td>{{$item->update_at}}</td>
                                     <td>
                                         <a href="/user/{{$item->id}}/edit" id="putUser" class="fa fa-edit"> Edit</a> <p> </p>
 

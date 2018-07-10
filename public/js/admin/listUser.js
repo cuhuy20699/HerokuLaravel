@@ -2,7 +2,7 @@ var API = "https://api.mlab.com/api/1/databases/storephone/collections/user?apiK
 var API2 = "http://heroku-laravel-1900.herokuapp.com/api/user";
 
 $(document).ready(function () {
-    getAPI2();
+    getApi();
     $('body').on('click', '#deleteUser', function (e) {
         e.preventDefault();
         var id = $(this).data('id');
@@ -26,10 +26,10 @@ $(document).ready(function () {
 function getApi() {
     $.ajax({
         method: 'get',
-        url: 'http://127.0.0.1:8000/api/user',
+        //url: 'http://127.0.0.1:8000/api/user',
         //url: 'http://heroku-laravel-1900.herokuapp.com/api/user',
 
-        //url: 'http://quiet-cliffs-41062.herokuapp.com/api/user',
+        url: 'http://quiet-cliffs-41062.herokuapp.com/api/user',
         data: {
             '_token': $('meta[name="csrf-token"]').attr('content')
         }
@@ -65,12 +65,12 @@ function getApi() {
 
 function getAPI2(){
     var ajaxhttp = new XMLHttpRequest();
-    ajaxhttp.open("GET", API2, true);
+    ajaxhttp.open("GET", API, true);
     ajaxhttp.setRequestHeader("content-type", "application/json");
     ajaxhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200){
             var text = JSON.parse(ajaxhttp.responseText);
-            console.log("ok");
+            console.log(text);
         }else
         {
             console.log('err');
