@@ -34,9 +34,9 @@
                         {{--@endif--}}
                         {{ csrf_field() }}
                         <div class="form-group row fullname-group">
-                            <label class="col-md-2 col-form-label text-right">Fullname</label>
+                            <label class="col-md-2 col-form-label text-right">Title</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" name="fullname"  id="fullname" placeholder="Nhập tên đầy đủ" >
+                                <input type="text" class="form-control" name="title"  id="title" placeholder="Nhập tên sản phẩm" >
                                 {{--value="{{$product->fullname}}"--}}
                                 {{--<div class="fullname-icon-err">--}}
                                     {{--<i class="fa fa-check"></i>--}}
@@ -47,9 +47,9 @@
                         </div>
 
                         <div class=" form-group row phone-group">
-                            <label class="col-md-2 col-form-label text-right">Phone</label>
+                            <label class="col-md-2 col-form-label text-right">Description</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" name="phone" id="phone"  placeholder="Nhập số điện thoại" >
+                                <input type="text" class="form-control" name="description" id="description"  placeholder="Nhập chú thích cho sản phẩm" >
                                 {{--value="{{$product->phone}}"--}}
                                 {{--<div class="phone-icon-err">--}}
                                     {{--<i class="fa fa-check"></i>--}}
@@ -59,53 +59,20 @@
                             </div>
                         </div>
 
-                        <div  class=" form-group row password-group">
-                            <label class="col-md-2 col-form-label text-right">Password</label>
+                        <div class="form-group row">
+                            <label class="col-md-2 col-form-label text-right">Price</label>
                             <div class="col-md-8">
-                                <input type="password" class="form-control" name="password" id="password"  placeholder="Nhập mật khẩu" >
-                                {{--value="{{$product->password}}"--}}
-                                {{--<div class="password-icon-err">--}}
-                                    {{--<i class="fa fa-check"></i>--}}
-                                {{--</div>--}}
-                                {{--<p class="password-err font-weight-normal"></p>--}}
-                                {{--<small class="text-danger">{{$errors->first('password')}}</small>--}}
+                                <input type="text" class="form-control" name="price" id="price" placeholder="Nhập giá">
+                                {{--value="{{$product->avatar}}"--}}
+                                {{--<small class="text-danger">{{$errors->first('avatar')}}</small>--}}
                             </div>
                         </div>
 
-                        <div class="form-group row email-group">
-                            <label class="col-md-2 col-form-label text-right">Email</label>
-                            <div class="col-md-8">
-                                <input type="text" class="form-control" {{--value="{{$product->email}}"--}} name="email" id="email" placeholder="Nhập email" >
-                                {{--value="{{$product->email}}"--}}
-                                {{--<div class="email-icon-err">--}}
-                                    {{--<i class="fa fa-check"></i>--}}
-                                {{--</div>--}}
-                                {{--<p class="email-err font-weight-normal"></p>--}}
-                                {{--<small class="text-danger">{{$errors->first('email')}}</small>--}}
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-md-2 col-form-label text-right">Gender</label>
-                            <div class="col-md-8">
-                                {{--<label class="radio-inline">--}}
-                                {{--<input type="radio" name="gender"  value="male" checked>Male--}}
-                                {{--</label>--}}
-                                {{--<label class="radio-inline">--}}
-                                {{--<input type="radio" name="gender"  value="famale">Famale--}}
-                                {{--</label>--}}
-                                {{--<label class="radio-inline">--}}
-                                {{--<input type="radio" name="gender"  value="orther">Orther--}}
-                                {{--</label>--}}
-                                <input type="text" class="form-control" name="gender" placeholder="Nhập giới tính">
-                                {{--value="{{$product->gender}}"--}}
-                                {{--<small class="text-danger">{{$errors->first('gender')}}</small>--}}
-                            </div>
-                        </div>
                         <div class="form-group row">
                             <label class="col-md-2 col-form-label text-right">Avatar</label>
                             <div class="col-md-8">
                                 <input type="file" name="avatar" id="avatar">
-                                <input type="text" hidden name="avatar2" id="avatar2" >
+                                {{--<input type="text" hidden name="avatar" id="avatar" >--}}
                                 {{--value="{{$product->avatar}}"--}}
                                 {{--<small class="text-danger">{{$errors->first('avatar')}}</small>--}}
                             </div>

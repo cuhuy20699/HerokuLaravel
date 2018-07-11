@@ -21,6 +21,5 @@ class OrderTableSeeder extends Seeder
             ['UserId'=>4,'title'=>'Xiaomi Redmi S2 32GB','category'=>1,'description'=>'Sau sự ra mắt của bộ đôi Samsung Galaxy A8, A8 Plus, hãng điện thoại Samsung  tiếp tục cho ra mắt sản phẩm mới thuộc phân khúc tầm trung. Sản phẩm giữ nguyên thiết kế của dòng Galaxy A và tính năng giống với A8, Samsung A6 hứa hẹn sẽ được nhiều người hài lòng và sử dụng nhiều nhất trong các dòng Samsung Galaxy.','img'=>'https://cdn.fptshop.com.vn/Uploads/Originals/2018/5/19/636623236912499129_xiaomi-s2-3-xam.jpg','price'=>8190000],
             ['UserId'=>5,'title'=>'Oppo A71 32GB (2018)','category'=>1,'description'=>'Phiên bản OPPO A71 (2018) bản 32 GB ra mắt với vi xử lý Snapdragon 450 mạnh mẽ hơn, chụp ảnh selfie làm đẹp bằng AI thông minh và giá rẻ hơn.','img'=>'http://dienmaythienhoa.vn/images/thumbnails/55/315/315/Untitled-1150546302359bb8aefe6d27.jpg','price'=>14490000],
         ]);
-
     }
 }

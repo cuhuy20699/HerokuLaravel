@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 
 function getAPIdemo() {
-    var url = 'https://quiet-cliffs-41062.herokuapp.com/api/products';
+    var url = 'http://127.0.0.1:8000/api/user';
     $.ajax({
         url: url,
         method: 'get',

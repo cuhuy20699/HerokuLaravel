@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\UserMember;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 
@@ -83,8 +84,12 @@ class UserMembersController extends Controller
         }
         return response()->json($user,201);
     }
-    public function findByPhone(Request $request, $phone){
-        $user = UserMember::find($phone);
+
+    public function findByPhone($phone){
+        $user = DB::table('user_members')
+            ->where('user_members.phone','like', '%'. $phone . '%')
+                ->select('user_members.*')
+            ->get();
         return response()->json($user,200);
     }
 
