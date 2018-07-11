@@ -19,8 +19,8 @@ class AdminController extends Controller
 //        $order = DB::table('orders')->join('user_members','orders.UserId','=','user_members.id')
 //            ->select('orders.*','user_members.fullname','user_members.avatar')->where('user_members.id','=','3')
 //            ->get();
-        $order = DB::table('orders')->join('user_members','orders.UserId','=','user_members.id')
-            ->select('orders.*','user_members.fullname','user_members.avatar')
+        $order = DB::table('orders_detail')->join('user_members','orders_detail.UserId','=','user_members.id')
+            ->select('orders_detail.*','user_members.fullname','user_members.avatar')
             ->get();
         return view('admin.listAdmin.Order.OrderUser')->with('order',$order);
     }
