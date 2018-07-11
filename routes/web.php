@@ -21,5 +21,7 @@ Route::get('/query', 'AdminController@query');
 //Route::get('/chart','AdminController@chart');
 
 Route::get('/chart', 'ChartController@index');
-//
+
+Route::resource('/products','ProductController');
+
 //Route::get('/formUserAdmin', 'AdminController@formUser');
