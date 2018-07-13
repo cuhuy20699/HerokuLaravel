@@ -6,28 +6,28 @@ var imgPreview = '';
 
 $(document).ready(function () {
     var fileUpload = document.getElementById('avatar');
-    // fileUpload.addEventListener('change', function (event) {
-    //     var file = event.target.files[0];
-    //     var formData = new FormData();
-    //     formData.append('file',file);
-    //     formData.append('upload_preset',CLOUDINARY_UPLOAD_PRESET);
-    //     $.ajax({
-    //         url: CLOUDINARY_URL,
-    //         type: 'POST',
-    //         data: formData,
-    //         cache: false,
-    //         contentType: false,
-    //         processData: false,
-    //         success: function (res) {
-    //             // imgPreview= res.secure_url;
-    //             console.log('Upload Img Thành Công');
-    //             return $('#avatar2').val(res.secure_url);
-    //         },
-    //         error: function (res, message) {
-    //             console.log(res + message);
-    //         }
-    //     });
-    // });
+    fileUpload.addEventListener('change', function (event) {
+        var file = event.target.files[0];
+        var formData = new FormData();
+        formData.append('file',file);
+        formData.append('upload_preset',CLOUDINARY_UPLOAD_PRESET);
+        $.ajax({
+            url: CLOUDINARY_URL,
+            type: 'POST',
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function (res) {
+                // imgPreview= res.secure_url;
+                console.log('Upload Img Thành Công');
+                return $('#avatar2').val(res.secure_url);
+            },
+            error: function (res, message) {
+                console.log(res + message);
+            }
+        });
+    });
 
     $('.fullname-err').hide();
     $('.fullname-icon-err').hide();
