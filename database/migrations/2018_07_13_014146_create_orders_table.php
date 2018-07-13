@@ -18,9 +18,6 @@ class CreateOrdersTable extends Migration
             $table->integer('UserId')->unsigned();
             $table->foreign('UserId')->references('id')->on('user_members');
 
-            $table->integer('productId')->unsigned();
-            $table->foreign('ProductId')->references('id')->on('products');
-
             $table->string('nameBuyes');
             $table->string('nameReceiver');
             $table->string('addressReceiver',767);
