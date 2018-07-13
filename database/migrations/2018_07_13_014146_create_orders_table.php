@@ -28,6 +28,7 @@ class CreateOrdersTable extends Migration
             $table->string('phoneReceiver');
             $table->string('totalMoney');
             $table->integer('quantity');
+            $table->string('note');
             $table->timestamps();
 
         });
