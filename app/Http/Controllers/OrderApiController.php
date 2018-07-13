@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Order;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
@@ -38,16 +39,16 @@ class OrderApiController extends Controller
     public function store(Request $request)
     {
         try {
-            $validator = Validator::make($request->all(), [
-                'nameBuyes' => 'bail|required|unique:orders|max:50',
+            $userJson = $request->json()->all();
+            $validator = Validator::make($userJson, [
+                'nameBuyes' => 'required|unique:orders|max:50',
                 'nameReceiver' => 'required',
                 'addressReceiver' => 'required',
                 'phoneBuyes' => 'required',
                 'phoneReceiver' => 'required',
                 'totalMoney' => 'required',
-                'quantity' => 'required',
+                'note' => 'required',
                 'UserId'=>'required',
-                'productId'=>'required',
             ]);
             if ($validator->fails()) {
                 return response()->json($validator->errors(), 400);
@@ -56,27 +57,29 @@ class OrderApiController extends Controller
             $productJson = $request->json()->all();
             $order = new Order();
             $order->nameBuyes = $productJson['nameBuyes'];
+
             $order->nameReceiver = $productJson['nameReceiver'];
+
             $order->addressReceiver = $productJson['addressReceiver'];
+
             $order->phoneBuyes = $productJson['phoneBuyes'];
+
             $order->phoneReceiver = $productJson['phoneReceiver'];
 
             $order->totalMoney = $productJson['totalMoney'];
 
-            $order->phoneReceiver = $productJson['phoneReceiver'];
-
-            $order->quantity = $productJson['quantity'];
+            $order->note = $productJson['note'];
 
             $order->UserId = $productJson['UserId'];
-            $order->productId = $productJson['productId'];
 
-            $order->created_at = $productJson['created_at'];
-
-            $order->updated_at = $productJson['updated_at'];
+//            $order->created_at = $productJson['created_at'];
+//
+//            $order->updated_at = $productJson['updated_at'];
             $order->save();
             return response()->json($productJson, 201);
+
         } catch (EXCEPTION $exception) {
-            return response()->json($exception->errors(), 500);
+            return response()->json('error');
         }
     }
 
@@ -89,10 +92,10 @@ class OrderApiController extends Controller
     public function show($id)
     {
         $entries = Order::find($id);
-        if ($entries === null) {
-            return;
+        if ($entries === null){
+            return view("errors.404");
         }
-        return response()->json($entries, 200);
+        return response()->json($entries, 201);
     }
 
     /**
@@ -115,17 +118,17 @@ class OrderApiController extends Controller
      */
     public function update(Request $request, $id)
     {
+        try{
         $productJson = $request->json()->all();
         $validator = Validator::make($request->all(), [
-            'nameBuyes' => 'bail|required|unique:orders|max:50',
+            'nameBuyes' => 'required|unique:orders|max:50',
             'nameReceiver' => 'required',
             'addressReceiver' => 'required',
             'phoneBuyes' => 'required',
             'phoneReceiver' => 'required',
             'totalMoney' => 'required',
-            'quantity' => 'required',
+            'note' => 'required',
             'UserId'=>'required',
-            'productId'=>'required',
         ]);
 
         if ($validator->fails()) {
@@ -133,8 +136,7 @@ class OrderApiController extends Controller
 
         }
 
-        try {
-            $order = new Order();
+            $order = Order::find($id);
             $order->nameBuyes = $productJson['nameBuyes'];
             $order->nameReceiver = $productJson['nameReceiver'];
             $order->addressReceiver = $productJson['addressReceiver'];
@@ -143,18 +145,12 @@ class OrderApiController extends Controller
 
             $order->totalMoney = $productJson['totalMoney'];
 
-            $order->phoneReceiver = $productJson['phoneReceiver'];
-
-            $order->quantity = $productJson['quantity'];
+            $order->note = $productJson['note'];
 
             $order->UserId = $productJson['UserId'];
-            $order->productId = $productJson['productId'];
-
-            $order->created_at = $productJson['created_at'];
-
-            $order->updated_at = $productJson['updated_at'];
             $order->save();
             return response()->json($productJson, 201);
+
         }catch (EXCEPTION $exception) {
             return response()->json($exception->errors(), 400);
         }
@@ -168,6 +164,11 @@ class OrderApiController extends Controller
      */
     public function destroy($id)
     {
-        //
+        try{
+            $user = Order::destroy($id);
+            return response()->json($user,201);
+        }catch (Exception $exception){
+            return response()->json($exception);
+        }
     }
 }

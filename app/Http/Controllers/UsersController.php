@@ -155,6 +155,6 @@ class UsersController extends Controller
 //    $table->integer('demo_id')->unsigned();
 //            $table->foreign('demo_id')->references('id')->on('user_members');
         return redirect("user");
-    }
 
+    }
 }

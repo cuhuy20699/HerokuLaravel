@@ -21,4 +21,7 @@ Route::resource('/user','UserMembersController');
 Route::get('/user/phone/{phone}','UserMembersController@findByPhone');
 
 Route::resource('/product','ProductAPIController');
+
 Route::resource('/order','OrderApiController');
+
+Route::resource('/orderDetail','OrderDetailController');

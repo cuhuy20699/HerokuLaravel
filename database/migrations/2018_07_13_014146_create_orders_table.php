@@ -29,6 +29,7 @@ class CreateOrdersTable extends Migration
             $table->string('totalMoney');
             $table->integer('quantity');
             $table->timestamps();
+
         });
     }
 
