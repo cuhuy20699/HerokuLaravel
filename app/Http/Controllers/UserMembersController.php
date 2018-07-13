@@ -51,7 +51,7 @@ class UserMembersController extends Controller
             'salt' => 'required',
             'role' => 'required',
             'status' => 'required',
-            'avatar' => 'required',
+//            'avatar' => 'required',
         ]);
         if ($validator->fails()) {
             return response()->json($validator->errors(),404);
@@ -65,7 +65,7 @@ class UserMembersController extends Controller
         $user->salt = $userJson['salt'];
         $user->role = $userJson['role'];
         $user->status = $userJson['status'];
-        $user->avatar = $userJson['avatar'];
+        //        $user->avatar = $userJson['avatar'];
         $user->save();
         return response()->json($user,201);
     }

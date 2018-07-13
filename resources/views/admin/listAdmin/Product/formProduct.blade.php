@@ -1,5 +1,5 @@
 @extends('admin.layoutAdmin.master')
-@section('title', 'Create User')
+@section('title', 'Create Search')
 @section('style')
     <link href="{{asset('css/layout.css')}}" rel="stylesheet">
 @endsection
@@ -28,53 +28,13 @@
                         {{--</div>--}}
                     {{--@endif--}}
 
-                    <form {{--action="{{$action}}"--}} id="add-product" method="POST" enctype="multipart/form-data" class="form-horizontal">
-                        {{--@if($method == "PUT")--}}
-                            {{--<input name="_method" type="hidden" value="PUT">--}}
-                        {{--@endif--}}
+                    <form action="/search" id="add-product" method="POST" enctype="multipart/form-data" class="form-horizontal">
                         {{ csrf_field() }}
                         <div class="form-group row fullname-group">
-                            <label class="col-md-2 col-form-label text-right">Title</label>
+                            <label class="col-md-2 col-form-label text-right">search</label>
                             <div class="col-md-8">
                                 <input type="text" class="form-control" name="title"  id="title" placeholder="Nhập tên sản phẩm" >
-                                {{--value="{{$product->fullname}}"--}}
-                                {{--<div class="fullname-icon-err">--}}
-                                    {{--<i class="fa fa-check"></i>--}}
-                                {{--</div>--}}
-                                {{--<p class="fullname-err font-weight-normal"></p>--}}
-                                {{--<small class="text-danger">{{$errors->first('fullname')}}</small>--}}
-                            </div>
-                        </div>
 
-                        <div class=" form-group row phone-group">
-                            <label class="col-md-2 col-form-label text-right">Description</label>
-                            <div class="col-md-8">
-                                <input type="text" class="form-control" name="description" id="description"  placeholder="Nhập chú thích cho sản phẩm" >
-                                {{--value="{{$product->phone}}"--}}
-                                {{--<div class="phone-icon-err">--}}
-                                    {{--<i class="fa fa-check"></i>--}}
-                                {{--</div>--}}
-                                {{--<p class="phone-err font-weight-normal"></p>--}}
-                                {{--<small class="text-danger">{{$errors->first('phone')}}</small>--}}
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label class="col-md-2 col-form-label text-right">Price</label>
-                            <div class="col-md-8">
-                                <input type="text" class="form-control" name="price" id="price" placeholder="Nhập giá">
-                                {{--value="{{$product->avatar}}"--}}
-                                {{--<small class="text-danger">{{$errors->first('avatar')}}</small>--}}
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label class="col-md-2 col-form-label text-right">Avatar</label>
-                            <div class="col-md-8">
-                                <input type="file" name="avatar" id="avatar">
-                                {{--<input type="text" hidden name="avatar" id="avatar" >--}}
-                                {{--value="{{$product->avatar}}"--}}
-                                {{--<small class="text-danger">{{$errors->first('avatar')}}</small>--}}
                             </div>
                         </div>
 

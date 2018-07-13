@@ -78,11 +78,7 @@ class ProductAPIController extends Controller
      */
     public function show(Request $request, $id)
     {
-        $entries = Product::find($id);
-        if ($entries === null) {
-            return;
-        }
-        return response()->json($entries, 200);
+
     }
 
     /**

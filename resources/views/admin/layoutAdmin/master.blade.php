@@ -269,6 +269,7 @@
                     <li>
                         <a href="/"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                     </li>
+
                     <li>
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> User<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
@@ -284,12 +285,30 @@
 
                     <li>
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Product<span class="fa arrow"></span></a>
+
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="/products/create"><i class="fa fa-edit fa-fw"></i> Create Product</a>
+                                <a href="/smartphone"><i class="fa fa-edit fa-fw"></i>SmartPhone</a>
                             </li>
                             <li>
-                                <a href="/products"><i class="fa fa-table fa-fw"></i> List Product</a>
+                                <a href="#"><i class="fa fa-edit fa-fw"></i>PC</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-edit fa-fw"></i>Laptop</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-edit fa-fw"></i>SmartPhone</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Order<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="#"><i class="fa fa-edit fa-fw"></i>List Order Detail</a>
+                            </li>
+                            <li>
+                                <a href="listOrderUser"><i class="fa fa-edit fa-fw"></i>List Order User</a>
                             </li>
                         </ul>
                     </li>
@@ -334,5 +353,5 @@
 </script>
 
 </body>
-
 </html>
+{{--/products/create--}}

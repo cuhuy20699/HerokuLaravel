@@ -15,7 +15,7 @@ class AdminController extends Controller
         return view('admin.listAdmin.login');
     }
 
-    public function query(){
+    public function listOrderUser(){
 //        $order = DB::table('orders')->join('user_members','orders.UserId','=','user_members.id')
 //            ->select('orders.*','user_members.fullname','user_members.avatar')->where('user_members.id','=','3')
 //            ->get();
@@ -25,6 +25,17 @@ class AdminController extends Controller
         return view('admin.listAdmin.Order.OrderUser')->with('order',$order);
     }
 
+    public function searchPhone(Request $request){
+        $key = $request->input('title');
+        $user = UserMember::where('fullname','like', '%'.$key.'%')
+                ->orwhere('phone', 'like','%'.$key.'%')
+            ->get();
+          return view('admin.listAdmin.Product.listProduct')->with('user', $user) ;
+    }
+
+    public function demoSearch(){
+        return view('admin.listAdmin.Product.formProduct');
+    }
 //    public function chart(){
 //        return view('admin.listAdmin.Chart.HighChart');
 //    }

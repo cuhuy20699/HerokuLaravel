@@ -1,5 +1,5 @@
 @extends('admin.layoutAdmin.master')
-@section('title', 'List Product')
+@section('title', 'List SmartPhone')
 @section('content')
     <div class="row">
         <div class="row">
@@ -20,26 +20,29 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Avatar</th>
-                                <th>Fullname</th>
+                                <th>Image</th>
+                                <th>Title</th>
+                                <th>Description</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody id="demo-get">
                             </tbody>
                             <tbody >
-                            @foreach($user as $item)
+                            @foreach($product as $item)
                                 <tr id="{{$item->id}}">
                                     <td>{{$item->id}}</td>
                                     <th class="col-md-2">
                                         <div class="card"
-                                             style="background-image: url('{{$item->avatar}}'); background-size: cover; width: 60px; height: 60px;">
+                                             style="background-image: url('{{$item->thumbnail}}'); background-size: cover; width: 60px; height: 60px;">
                                         </div>
                                         {{--<img src="" style=" with:60px; height: 60px" class="img-thumbnail">--}}
                                     </th>
-                                    <td>{{$item->fullname}}</td>
+                                    <td>{{$item->title}}</td>
+                                    <td>{{$item->description}} </td>
 
                                     <td>
-                                        <a href="/user/{{$item->id}}/edit" id="putUser" class="fa fa-edit"> Edit</a> <p> </p>
+                                        <a href="/smartphone/{{$item->id}}/edit" id="putUser" class="fa fa-edit"> Edit</a> <p> </p>
 
                                         <a href="#" id="delete-{{$item->id}}" class="fa fa-trash btn-delete"> Delete</a>
                                     </td>
@@ -79,5 +82,5 @@
 @endsection
 
 @section('js')
-    <script src="{{asset('js/admin/listProduct.js')}}"></script>
+    {{--<script src="{{asset('js/admin/listProduct.js')}}"></script>--}}
 @endsection
