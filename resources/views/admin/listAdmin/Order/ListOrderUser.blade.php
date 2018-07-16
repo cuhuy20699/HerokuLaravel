@@ -25,10 +25,10 @@
                             <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Avatar</th>
-                                <th>FullName</th>
+                                <th>Image</th>
+                                <th>User</th>
                                 <th>Product</th>
-                                <th>Price</th>
+                                <th>Quantity</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
@@ -40,16 +40,18 @@
                                     <td>{{$item->id}}</td>
                                     <th class="col-md-2">
                                         <div class="card"
-                                             style="background-image: url('{{$item->img}}'); background-size: cover; width: 60px; height: 60px;">
+                                             style="background-image: url('{{$item->avatar}}'); background-size: cover; width: 60px; height: 60px;">
                                         </div>
                                     </th>
-                                    <td id="fullname-{{$item->id}}">{{$item->fullname}} </td>
-                                    <td id="password-{{$item->id}}">{{$item->title}}</td>
-                                    <td id="email-{{$item->id}}" >{{$item->price}}</td>
+                                    <td>{{$item->fullname}} </td>
+                                    <td>{{$item->title}}</td>
+                                    <td>{{$item->quantity}}</td>
+                                    {{--<td id="password-{{$item->id}}">{{$item->title}}</td>--}}
+                                    {{--<td id="email-{{$item->id}}" >{{$item->price}}</td>--}}
                                     <td>
-                                        <a href="/user/{{$item->id}}/edit" id="putUser" class="fa fa-edit"> Edit</a> <p> </p>
+                                        <a href="/order/{{$item->id}}/edit" id="putUser" class="fa fa-edit"> Edit</a> <p> </p>
 
-                                        <a href="#" id="delete-{{$item->id}}" class="fa fa-trash btn-delete"> Delete</a>
+                                        <a href="#" class="fa fa-trash btn-delete"> Delete</a>
                                     </td>
                                 </tr>
                             @endforeach

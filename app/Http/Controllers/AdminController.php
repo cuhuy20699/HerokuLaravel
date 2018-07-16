@@ -15,15 +15,15 @@ class AdminController extends Controller
         return view('admin.listAdmin.login');
     }
 
-    public function listOrderUser(){
-//        $order = DB::table('orders')->join('user_members','orders.UserId','=','user_members.id')
-//            ->select('orders.*','user_members.fullname','user_members.avatar')->where('user_members.id','=','3')
+//    public function listOrderUser(){
+////        $order = DB::table('orders')->join('user_members','orders.UserId','=','user_members.id')
+////            ->select('orders.*','user_members.fullname','user_members.avatar')->where('user_members.id','=','3')
+////            ->get();
+//        $order = DB::table('orders_detail')->join('user_members','orders_detail.UserId','=','user_members.id')
+//            ->select('orders_detail.*','user_members.fullname','user_members.avatar')
 //            ->get();
-        $order = DB::table('orders_detail')->join('user_members','orders_detail.UserId','=','user_members.id')
-            ->select('orders_detail.*','user_members.fullname','user_members.avatar')
-            ->get();
-        return view('admin.listAdmin.Order.OrderUser')->with('order',$order);
-    }
+//        return view('admin.listAdmin.Order.OrderUser')->with('order',$order);
+//    }
 
     public function searchPhone(Request $request){
         $key = $request->input('title');

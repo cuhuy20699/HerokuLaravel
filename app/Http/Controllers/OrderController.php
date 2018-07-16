@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Order;
+use App\Order_detail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
 class OrderController extends Controller
@@ -15,8 +17,25 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $order = Order::all();
-        return view('admin.listAdmin.Order.OrderUser')->with('order', $order);
+        $order = DB::table('order_details')
+            ->join('orders','order_details.orderId','=','orders.id')
+            ->join('user_members' ,'orders.UserId','=','user_members.id')
+            ->join('products','order_details.productId','=','products.id')
+            ->select('order_details.*','orders.*','user_members.*','products.*')
+            ->get();
+
+            //    public function listOrderUser(){
+////        $order = DB::table('orders')->join('user_members','orders.UserId','=','user_members.id')
+////            ->select('orders.*','user_members.fullname','user_members.avatar')->where('user_members.id','=','3')
+////            ->get();
+//        $order = DB::table('orders_detail')->join('user_members','orders_detail.UserId','=','user_members.id')
+//            ->select('orders_detail.*','user_members.fullname','user_members.avatar')
+//            ->get();
+//        return view('admin.listAdmin.Order.OrderUser')->with('order',$order);
+//    }
+
+
+        return view('admin.listAdmin.Order.ListOrderUser')->with('order', $order);
     }
 
     /**

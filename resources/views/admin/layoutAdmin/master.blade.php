@@ -38,7 +38,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">SB Admin v2.0</a>
+            <a class="navbar-brand" href="/">Admin </a>
         </div>
         <!-- /.navbar-header -->
 
@@ -304,11 +304,11 @@
                     <li>
                         <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Order<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
+                            {{--<li>--}}
+                                {{--<a href="#"><i class="fa fa-edit fa-fw"></i>List Order Detail</a>--}}
+                            {{--</li>--}}
                             <li>
-                                <a href="#"><i class="fa fa-edit fa-fw"></i>List Order Detail</a>
-                            </li>
-                            <li>
-                                <a href="listOrderUser"><i class="fa fa-edit fa-fw"></i>List Order User</a>
+                                <a href="/order"><i class="fa fa-edit fa-fw"></i>List Order Detail</a>
                             </li>
                         </ul>
                     </li>
