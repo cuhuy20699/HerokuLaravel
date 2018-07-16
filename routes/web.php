@@ -12,7 +12,7 @@
 */
 Route::get('/', 'AdminController@index');
 
-Route::resource('user','UsersController');
+Route::resource('/user','UsersController');
 
 Route::resource('/products','ProductController');
 
@@ -29,5 +29,11 @@ Route::get('/demo','AdminController@demoSearch');
 Route::post('/search', 'AdminController@searchPhone');
 
 Route::resource('/order','OrderController');
+
+Route::get('/homepage','Client\HomepageController@index');
+Route::get('/list','Client\HomepageController@index2');
+Route::get('/intro','Client\HomepageController@index3');
+Route::get('/contact','Client\HomepageController@index4');
+
 
 //Route::get('/formUserAdmin', 'AdminController@formUser');
