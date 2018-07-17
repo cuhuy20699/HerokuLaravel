@@ -15,13 +15,39 @@ class HomepageController extends Controller
         return view('client.layoutHomepage.master')->with('category',$category);
 
     }
-    public function index2(){
+    public function test(){
+        return view('client.listClient.dashboard');
+    }
+    public function getListSmartPhone(){
         $category = Category::all();
-        $product = Product::paginate(6);
+        $product = Product::where('categoryId',1)->get();
 
-        return view('client.listClient.dashboard')->with('category',$category)->with('product',$product);
+        return view('client.listClient.smartphone')->with('category',$category)->with('product',$product);
 
     }
+    public function getListPC(){
+        $category = Category::all();
+        $product = Product::where('categoryId',3)->get();
+
+        return view('client.listClient.pc')->with('category',$category)->with('product',$product);
+
+    }
+    public function getListLaptop(){
+        $category = Category::all();
+        $product = Product::where('categoryId',2)->get();
+
+        return view('client.listClient.laptop')->with('category',$category)->with('product',$product);
+
+    }
+    public function getListConsole(){
+        $category = Category::all();
+        $product = Product::where('categoryId',4)->get();
+
+        return view('client.listClient.console')->with('category',$category)->with('product',$product);
+
+    }
+
+
     public function index3(){
         $category = Category::all();
 

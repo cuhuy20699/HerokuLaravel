@@ -19,6 +19,7 @@
             padding: 60px 0;
         }
 
+
         section .section-title {
             text-align: center;
             color: #007b5e;
@@ -28,6 +29,7 @@
         #footer {
             background: #007b5e !important;
         }
+
         #footer h5{
             padding-left: 10px;
             border-left: 3px solid #eeeeee;
@@ -476,7 +478,7 @@
         <aside class="col-sm-3">
             <p>Card banner overlay </p>
 
-            <a href="#"><div class="card-banner  overlay-grad" style="height:250px; background-image: url('https://i.kinja-img.com/gawker-media/image/upload/t_original/evtwgjgb3xbmtirbyawn.jpg');">
+            <a href="/list1"><div class="card-banner  overlay-grad" style="height:250px; background-image: url('https://i.kinja-img.com/gawker-media/image/upload/t_original/evtwgjgb3xbmtirbyawn.jpg');">
                 <div class="card-body text-white">
                     <h5 class="card-title">SMARTPHONE</h5>
                     {{--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>--}}
@@ -489,7 +491,7 @@
         <aside class="col-sm-3">
             <p>Card banner overlay </p>
 
-            <a href="#"> <div class="card-banner  overlay-grad" style="height:250px; background-image: url('https://img.purch.com/1524196804874-jpg/w/755/aHR0cDovL21lZGlhLmJlc3RvZm1pY3JvLmNvbS8yL1EvNzY2MDM0L29yaWdpbmFsLzE1MjQxOTY4MDQ4NzQuanBn');">
+            <a href="/list2"> <div class="card-banner  overlay-grad" style="height:250px; background-image: url('https://img.purch.com/1524196804874-jpg/w/755/aHR0cDovL21lZGlhLmJlc3RvZm1pY3JvLmNvbS8yL1EvNzY2MDM0L29yaWdpbmFsLzE1MjQxOTY4MDQ4NzQuanBn');">
                 <div class="card-body text-white">
                     <h5 class="card-title">LAPTOP</h5>
                     {{--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>--}}
@@ -502,7 +504,7 @@
         <aside class="col-sm-3">
             <p>Card banner overlay </p>
 
-            <a href="#"> <div class="card-banner  overlay-grad" href="#" style="height:250px; background-image: url('https://genknews.genkcdn.vn/2016/photo-0-1475228344066.jpg');">
+            <a href="/list3"> <div class="card-banner  overlay-grad" href="#" style="height:250px; background-image: url('https://genknews.genkcdn.vn/2016/photo-0-1475228344066.jpg');">
                 <div class="card-body text-white">
                     <h5 class="card-title">PC</h5>
                     {{--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>--}}
@@ -514,7 +516,7 @@
         <aside class="col-sm-3">
             <a><p>Card banner overlay </p></a>
 
-            <a href="#"> <div class="card-banner  overlay-grad" style="height:250px; background-image: url('https://www.console-deals.com/advice/wp-content/uploads/2017/10/Xbox-One-X-Console-White-1.png');">
+            <a href="/list4"> <div class="card-banner  overlay-grad" style="height:250px; background-image: url('https://www.console-deals.com/advice/wp-content/uploads/2017/10/Xbox-One-X-Console-White-1.png');">
                 <div class="card-body text-white">
                     <h5 class="card-title">CONSOLE</h5>
                     {{--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>--}}
