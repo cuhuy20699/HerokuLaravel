@@ -1,0 +1,52 @@
+*{
+    font-family: Arial,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+}
+.product-item{
+    position: relative;
+}
+.manage-header{
+    border-bottom: none;
+}
+.manage-header li a{
+    text-decoration: none;
+}
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+
+    width: 100%;
+    height:0;
+    transition: 1s ease;
+}
+
+.product-item:hover .overlay {
+    bottom: 0;
+    height: 100%;
+    opacity: 0.85;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text a{
+    text-decoration: none;
+}
+
+
+
+.list-menu-item li a{
+    text-decoration: none;
+}
+.list-menu-item li a:hover{
+    border-bottom: 2px solid #d9232e;
+}

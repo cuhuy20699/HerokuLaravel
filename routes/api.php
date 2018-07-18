@@ -16,6 +16,7 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
 Route::resource('/user','UserMembersController');
 
 Route::get('/user/phone/{phone}','UserMembersController@findByPhone');
@@ -24,4 +25,4 @@ Route::resource('/product','ProductAPIController');
 
 Route::resource('/order','OrderApiController');
 
-Route::resource('/orderDetail','OrderDetailController');
+//Route::resource('/orderDetail','OrderDetailController');

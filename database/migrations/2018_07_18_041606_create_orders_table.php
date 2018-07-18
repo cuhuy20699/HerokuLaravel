@@ -18,15 +18,16 @@ class CreateOrdersTable extends Migration
             $table->integer('UserId')->unsigned();
             $table->foreign('UserId')->references('id')->on('user_members');
 
+            $table->integer('orderDetailsId')->unsigned();
+            $table->foreign('orderDetailsId')->references('id')->on('order_details');
+
             $table->string('nameBuyes');
             $table->string('nameReceiver');
             $table->string('addressReceiver',767);
             $table->string('phoneBuyes');
             $table->string('phoneReceiver');
-            $table->string('totalMoney');
             $table->string('note');
             $table->timestamps();
-
         });
     }
 

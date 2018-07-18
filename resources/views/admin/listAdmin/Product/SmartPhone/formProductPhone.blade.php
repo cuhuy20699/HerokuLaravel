@@ -34,13 +34,13 @@
                         @endif
                         {{ csrf_field() }}
                         <div class="form-group row fullname-group">
-                            <label class="col-md-2 col-form-label text-right">Title</label>
+                            <label class="col-md-2 col-form-label text-right">Title hihi</label>
                             <div class="col-md-8">
                                 <input type="text" class="form-control" name="title" value="{{$product->title}}" id="title" placeholder="Nhập tên sản phẩm" >
-                                <div class="fullname-icon-err">
-                                    <i class="fa fa-check"></i>
-                                </div>
-                                <p class="fullname-err font-weight-normal"></p>
+                                {{--<div class="fullname-icon-err">--}}
+                                    {{--<i class="fa fa-check"></i>--}}
+                                {{--</div>--}}
+                                {{--<p class="fullname-err font-weight-normal"></p>--}}
                                 <small class="text-danger">{{$errors->first('title')}}</small>
                             </div>
                         </div>
@@ -49,10 +49,10 @@
                             <label class="col-md-2 col-form-label text-right">Description</label>
                             <div class="col-md-8">
                                 <input type="text" class="form-control" name="description" id="description" value="{{$product->description}}" placeholder="Nhập chú thích cho sản phẩm" >
-                                <div class="phone-icon-err">
-                                    <i class="fa fa-check"></i>
-                                </div>
-                                <p class="phone-err font-weight-normal"></p>
+                                {{--<div class="phone-icon-err">--}}
+                                    {{--<i class="fa fa-check"></i>--}}
+                                {{--</div>--}}
+                                {{--<p class="phone-err font-weight-normal"></p>--}}
                                 <small class="text-danger">{{$errors->first('description')}}</small>
                             </div>
                         </div>
@@ -61,10 +61,10 @@
                             <label class="col-md-2 col-form-label text-right">Price</label>
                             <div class="col-md-8">
                                 <input type="text" class="form-control" name="price" id="price" value="{{$product->price}}" placeholder="Nhập giá cho sản phẩm" >
-                                <div class="password-icon-err">
-                                    <i class="fa fa-check"></i>
-                                </div>
-                                <p class="password-err font-weight-normal"></p>
+                                {{--<div class="password-icon-err">--}}
+                                    {{--<i class="fa fa-check"></i>--}}
+                                {{--</div>--}}
+                                {{--<p class="password-err font-weight-normal"></p>--}}
                                 <small class="text-danger">{{$errors->first('price')}}</small>
                             </div>
                         </div>
@@ -72,7 +72,7 @@
                         <div class="form-group row">
                             <label class="col-md-2 col-form-label text-right">Thumnail</label>
                             <div class="col-md-8">
-                                <input type="text" name="thumbnail" id="thumbnail">
+                                <input type="file" name="thumbnail" id="thumbnail">
                                 <input type="text" hidden name="avatar2" id="avatar2" value="{{$product->thumbnail}}">
                                 <small class="text-danger">{{$errors->first('avatar')}}</small>
                             </div>
@@ -105,5 +105,5 @@
 
     <script src="{{asset('vendor-admin/datatables-responsive/dataTables.responsive.js')}}"> </script>
 
-    {{--<script src="{{asset('js/admin/formUser.js')}}"> </script>--}}
+    <script src="{{asset('js/admin/formUser.js')}}"> </script>
 @endsection

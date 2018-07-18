@@ -27,16 +27,16 @@
                             <tbody id="demo-get">
                             </tbody>
                             <tbody >
-                            @foreach($user as $item)
+                            @foreach($product as $item)
                                 <tr id="{{$item->id}}">
                                     <td>{{$item->id}}</td>
                                     <th class="col-md-2">
                                         <div class="card"
-                                             style="background-image: url('{{$item->avatar}}'); background-size: cover; width: 60px; height: 60px;">
+                                             style="background-image: url('{{$item->thumnail}}'); background-size: cover; width: 60px; height: 60px;">
                                         </div>
                                         {{--<img src="" style=" with:60px; height: 60px" class="img-thumbnail">--}}
                                     </th>
-                                    <td>{{$item->fullname}}</td>
+                                    <td>{{$item->title}}</td>
 
                                     <td>
                                         <a href="/user/{{$item->id}}/edit" id="putUser" class="fa fa-edit"> Edit</a> <p> </p>

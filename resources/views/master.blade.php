@@ -8,14 +8,11 @@
     <title>@yield('title')</title>
     <meta content="{{csrf_token()}}" name="csrf-token">
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
-    {{--<link href="{{asset('css/layout.css')}}" rel="stylesheet">--}}
-    {{--<link href="{{asset('css/user-admin.css')}}" rel="stylesheet">--}}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <script src="{{asset('js/app.js')}}"> </script>
-    {!! Charts::styles() !!}
 </head>
 <body>
-<header id="header" style="background: #f8f8f8; border-color: #e7e7e7" class="border-bottom">
+    <header id="header" style="background: #f8f8f8; border-color: #e7e7e7" class="border-bottom">
     <nav class="navbar navbar-expand-lg navbar-light">
         <h5><a class="navbar-brand" href="#">Admin</a></h5>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,26 +32,6 @@
         </div>
     </nav>
 </header>
-<div>
-    {!! $chart->render() !!}
-    {!! Charts::scripts() !!}
-    {!! $chart->script() !!}
-</div>
 
-<main class="page-wapper">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-4 col-lg-2 pr-lg-0 pl-lg-0 border-right">
-                <div class="username-admin">
-                </div>
-            </div>
-
-            <div class="col-md-12 col-lg-10 bg-white">
-
-            </div>
-        </div>
-    </div>
-</main>
-{{--<script src="{{asset('js/user-admin.js')}}"> </script>--}}
 </body>
 </html>

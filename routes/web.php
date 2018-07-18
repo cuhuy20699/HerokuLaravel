@@ -10,24 +10,32 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'AdminController@index');
+//ADIM
+Route::get('/admin', 'AdminController@index');
 
 Route::resource('user','UsersController');
 
 Route::resource('/products','ProductController');
 
+Route::resource('/smartphone','ProductSmartPhonesController');
+
 Route::get('/loginAdmin', 'AdminController@loginAdmin');
 
-Route::get('/listOrderUser', 'AdminController@listOrderUser');
-
 Route::get('/chart', 'ChartController@index');
-
-Route::resource('/smartphone','ProductSmartPhonesController');
 
 Route::get('/demo','AdminController@demoSearch');
 
 Route::post('/search', 'AdminController@searchPhone');
 
 Route::resource('/order','OrderController');
+// END ADMIN
 
-//Route::get('/formUserAdmin', 'AdminController@formUser');
+Route::get('/homepage','Client\HomepageController@index');
+
+Route::get('/listItem','Client\HomepageController@listItem');
+
+Route::get('productDetail/{id}','Client\ClientController@productDetail');
+
+Route::resource('/shoppingCart','Client\OrderDetailController');
+
+

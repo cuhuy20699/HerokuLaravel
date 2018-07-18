@@ -35,8 +35,8 @@ Về ngoại hình iPhone 8 Plus không có quá nhiều khác biệt so với n
                 'title' => 'iPhone 8 Plus 256GB',
                 'categoryId' => 1,
                 'description' => 'iPhone 8 Plus là bản nâng cấp nhẹ của chiếc iPhone 7 Plus đã ra mắt trước đó với cấu hình mạnh mẽ cùng camera có nhiều cải tiến.
-Thiết kế quen thuộc
-Về ngoại hình iPhone 8 Plus không có quá nhiều khác biệt so với người đàn anh đi trước.',
+                Thiết kế quen thuộc
+                Về ngoại hình iPhone 8 Plus không có quá nhiều khác biệt so với người đàn anh đi trước.',
                 'thumbnail' => 'https://cdn4.tgdd.vn/Products/Images/42/114114/iphone-8-plus-256gb-hh-400x400.jpg',
                 'price' => 27950000,
 
@@ -112,38 +112,38 @@ Về ngoại hình iPhone 8 Plus không có quá nhiều khác biệt so với n
                 'title' => 'PC Dell Vostro 3670 MTG5400 Pentium G5400/4G/1TB',
                 'categoryId' => 3,
                 'description' => 'Sức mạnh xử lý: Đảm đương khối lượng công việc của bạn một cách nhanh chóng và hiệu quả với bộ vi xử lý Pentium® G5400 thế hệ thứ 8 và bộ nhớ lên đến 4GB DDR4. 
-Mở rộng dễ dàng: 1TB dung lượng lưu trữ HDD để dễ dàng truy cập tất cả các tệp, ảnh và video bạn cần.',
+                Mở rộng dễ dàng: 1TB dung lượng lưu trữ HDD để dễ dàng truy cập tất cả các tệp, ảnh và video bạn cần.',
                 'thumbnail' => 'https://hanoicomputercdn.com/media/product/250_42688_desktop_vostro_3670_5.jpg',
                 'price' => 7699000,
             ],[
                 'title' => 'PC Dell Inspiron 3670 MTI31410 i3 8100/4G/1TB',
                 'categoryId' => 3,
                 'description' => 'Bộ vi xử lý mạnh mẽ: Được xây dựng với bộ vi xử lý Intel® Core i3-8100 thế hệ thứ 8, bạn có thể mong đợi một trải nghiệm PC đáng tin cậy đã được chứng minh. 
-Lưu trữ cao cấp: Dung lượng 1TB HDD bên trong ổ cứng của PC. Bạn cũng có thể chọn thêm ổ đĩa nữa cho nhiều không gian để sao lưu. 
-Tăng cường hiệu suất : Đáp ứng nhu cầu của bạn với thời gian làm việc nhanh hơn, tốc độ truyền tải cao hơn và tiêu thụ ít năng lượng hơn, tất cả đều nhờ vào hiệu suất của RAM DDR4 / 2400 và dung lượng 4GB.',
+                Lưu trữ cao cấp: Dung lượng 1TB HDD bên trong ổ cứng của PC. Bạn cũng có thể chọn thêm ổ đĩa nữa cho nhiều không gian để sao lưu. 
+                Tăng cường hiệu suất : Đáp ứng nhu cầu của bạn với thời gian làm việc nhanh hơn, tốc độ truyền tải cao hơn và tiêu thụ ít năng lượng hơn, tất cả đều nhờ vào hiệu suất của RAM DDR4 / 2400 và dung lượng 4GB.',
                 'thumbnail' => 'https://hanoicomputercdn.com/media/product/250_42679_desktop_inspiron_3670mt_001.jpg',
                 'price' => 8899000,
             ],[
                 'title' => 'Workstation Dell T3620 E3-1225V5/8Gb (2*4Gb)/1TB/VGA K620 2Gb/DVDRW/Key/Mouse/70077952',
                 'categoryId' => 3,
                 'description' => 'Máy trạm Dell Precision T3620 (70077952) - Tower 
-Bộ vi xử lý:Xeon E3-1225v5(3.30 GHz,8MB) 
-Ram: 8GB DDR4 (2x4G) 
-HDD: 1TB 
-Card xử lý đồ họa: 2GB Nvidia Quadro K620',
+                Bộ vi xử lý:Xeon E3-1225v5(3.30 GHz,8MB) 
+                Ram: 8GB DDR4 (2x4G) 
+                HDD: 1TB 
+                Card xử lý đồ họa: 2GB Nvidia Quadro K620',
                 'thumbnail' => 'https://hanoicomputercdn.com/media/product/250_41754_pcws015_01.jpg',
                 'price' => 22499000,
             ],[
                 'title' => 'PC HNC MINI GAMING - ESPORT G2 G5500/8G/SSD120G/GTX1050Ti',
                 'categoryId' => 3,
                 'description' => 'PC HNC Mini phiên bản 2018 với nhiều cải tiến. Sử dụng thế hệ CPU Coffee Lake mới nhất đến từ Intel và đặc biệt được trang bị sẵn SSD mang lại tốc độ vượt trội 
-CPU Intel Pentium Gold G5500 3.8Ghz / 4MB / Sk 1151 (Coffee Lake) 
-Mainboard ASUS PRIME H310M-E 
-RAM DDR4 ANTECMEMORY 8GB - Bus 2400Mhz 
-Vga MSI GTX 1050Ti 4GB OCV1 
-SSD Colorful SL300 120GB - 3D NAND 
-Nguồn FSP AX400 - Active PFC 
-Case mini Jonsbo C2 - chất liệu Aluminum cao cấp',
+                CPU Intel Pentium Gold G5500 3.8Ghz / 4MB / Sk 1151 (Coffee Lake) 
+                Mainboard ASUS PRIME H310M-E 
+                RAM DDR4 ANTECMEMORY 8GB - Bus 2400Mhz 
+                Vga MSI GTX 1050Ti 4GB OCV1 
+                SSD Colorful SL300 120GB - 3D NAND 
+                Nguồn FSP AX400 - Active PFC 
+                Case mini Jonsbo C2 - chất liệu Aluminum cao cấp',
                 'thumbnail' => 'https://hanoicomputercdn.com/media/product/250_42319_pc_gaming_esport_final_1.png',
                 'price' => 13099000,
             ],[

@@ -62,7 +62,7 @@ class ProductSmartPhonesController extends Controller
         $product->title = $request->get("title");
         $product->description = $request->get("description");
         $product->price = $request->get("price");
-        $product->thumbnail = $request->get("thumbnail");
+        $product->thumbnail = $request->get("avatar2");
         $product->categoryId = 1;
         $product->save();
         return redirect('/smartphone');
@@ -115,7 +115,7 @@ class ProductSmartPhonesController extends Controller
         $product->title = $request->get("title");
         $product->description = $request->get("description");
         $product->price = $request->get("price");
-        $product->thumbnail = $request->get("thumbnail");
+        $product->thumbnail = $request->get('avatar2');
         $product->save();
         if ($request->get("isAjax")) {
             return $product;
@@ -132,6 +132,8 @@ class ProductSmartPhonesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = Product::find($id);
+        $user->delete();
+        return redirect('smartphone');
     }
 }

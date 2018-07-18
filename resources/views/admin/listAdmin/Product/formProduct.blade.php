@@ -18,15 +18,15 @@
                     Sản phẩm mới
                 </div>
                 <div class="panel-body">
-                    {{--@if ($errors->any())--}}
-                        {{--<div class="alert alert-danger">--}}
-                            {{--<ul>--}}
-                                {{--@foreach ($errors->all() as $error)--}}
-                                    {{--<li>{{ $error }}</li>--}}
-                                {{--@endforeach--}}
-                            {{--</ul>--}}
-                        {{--</div>--}}
-                    {{--@endif--}}
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
 
                     <form action="/search" id="add-product" method="POST" enctype="multipart/form-data" class="form-horizontal">
                         {{ csrf_field() }}
